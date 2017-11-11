@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "slug": ">= 0.8.0",
+    "xml2json": ">= 0.6.1"
+  }
+}
