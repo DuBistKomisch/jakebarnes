@@ -13,7 +13,7 @@
   width: 32px;
   max-height: 32px;
   overflow: hidden;
-  transition: width 0.5s, max-height 0.5s;
+  transition: width 0.25s, max-height 0.25s;
 
   background: #222;
   color: #eee;
@@ -23,7 +23,7 @@
 
 .nav:hover {
   width: 128px;
-  max-height: 224px;
+  max-height: 256px;
 }
 
 .nav > li {
@@ -42,6 +42,13 @@
   color: inherit;
   text-decoration: inherit;
   border: none;
+  background: rgba(51, 51, 51, 0);
+  transition: background 0.25s, color 0.25s;
+}
+
+.nav > li > a:hover {
+  color: rgb(65, 131, 196);
+  background: rgba(51, 51, 51, 1);
 }
 
 .nav > li > span.hamburger {
