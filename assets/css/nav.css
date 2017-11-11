@@ -23,7 +23,7 @@
 
 .nav:hover {
   width: 128px;
-  max-height: 96px;
+  max-height: 128px;
 }
 
 .nav > li {
@@ -41,6 +41,7 @@
 
   color: inherit;
   text-decoration: inherit;
+  border: none;
 }
 
 .nav > li > span.hamburger {

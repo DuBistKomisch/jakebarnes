@@ -25,6 +25,11 @@ fn home() -> Template {
     Template::render("home", HomeContext { age })
 }
 
+#[get("/kf")]
+fn kf() -> Template {
+    Template::render("kf", {})
+}
+
 // load assets
 #[get("/assets/<file..>")]
 fn assets(file: PathBuf) -> Option<NamedFile> {
@@ -41,6 +46,7 @@ fn main() {
     rocket::ignite()
         .mount("/", routes![
              home,
+             kf,
              assets,
              public
         ])

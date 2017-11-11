@@ -1,0 +1,487 @@
+[
+  {
+    "id": "core",
+    "name": "Core",
+    "data": [
+      {
+        "id": "west-london",
+        "api": "westlondon",
+        "name": "West London",
+        "rate": [
+          14.26,
+          5.4,
+          1.86,
+          1.41
+        ]
+      },
+      {
+        "id": "manor",
+        "api": "manor",
+        "name": "Manor",
+        "rate": [
+          9.01,
+          3.81,
+          1.64,
+          1.24
+        ]
+      },
+      {
+        "id": "farm",
+        "api": "farm",
+        "name": "Farm",
+        "rate": [
+          8.21,
+          3.02,
+          1.54,
+          1.22
+        ]
+      },
+      {
+        "id": "offices",
+        "api": "offices",
+        "name": "Offices",
+        "rate": [
+          7.62,
+          3.12,
+          1.54,
+          1.23
+        ]
+      },
+      {
+        "id": "biotics-lab",
+        "api": "bioticslab",
+        "name": "Biotics Lab",
+        "rate": [
+          11.12,
+          4.85,
+          1.86,
+          1.4
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summer-2009",
+    "name": "Summer 2009",
+    "data": [
+      {
+        "id": "foundry",
+        "api": "foundry",
+        "name": "Foundry",
+        "rate": [
+          4.98,
+          2.62,
+          1.45,
+          1.2
+        ]
+      },
+      {
+        "id": "bedlam",
+        "api": "asylum",
+        "name": "Bedlam",
+        "rate": [
+          4.37,
+          2.6,
+          1.42,
+          1.18
+        ]
+      },
+      {
+        "id": "wyre",
+        "api": "wyre",
+        "name": "Wyre",
+        "rate": [
+          4.5,
+          2.22,
+          1.37,
+          1.16
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grindhouse",
+    "name": "Grindhouse",
+    "data": [
+      {
+        "id": "biohazard",
+        "api": "biohazard",
+        "name": "Biohazard",
+        "rate": [
+          3.92,
+          2.23,
+          1.39,
+          1.26
+        ]
+      },
+      {
+        "id": "crash",
+        "api": "crash",
+        "name": "Crash",
+        "rate": [
+          4.95,
+          2.42,
+          1.36,
+          1.2
+        ]
+      },
+      {
+        "id": "departed",
+        "api": "departed",
+        "name": "Departed",
+        "rate": [
+          4.58,
+          2.43,
+          1.45,
+          1.27
+        ]
+      },
+      {
+        "id": "filths-cross",
+        "api": "filthscross",
+        "name": "Filth's Cross",
+        "rate": [
+          3.56,
+          1.93,
+          1.28,
+          1.17
+        ]
+      },
+      {
+        "id": "hospital-horrors",
+        "api": "hospitalhorrors",
+        "name": "Hospital Horrors",
+        "rate": [
+          3.37,
+          1.86,
+          1.28,
+          1.19
+        ]
+      },
+      {
+        "id": "icebreaker",
+        "api": "icebreaker",
+        "name": "Icebreaker",
+        "rate": [
+          3.64,
+          1.9,
+          1.25,
+          1.17
+        ]
+      },
+      {
+        "id": "mountain-pass",
+        "api": "mountainpass",
+        "name": "Mountain Pass",
+        "rate": [
+          8.31,
+          3.33,
+          1.53,
+          1.28
+        ]
+      },
+      {
+        "id": "suburbia",
+        "api": "suburbia",
+        "name": "Suburbia",
+        "rate": [
+          3.52,
+          1.82,
+          1.25,
+          1.15
+        ]
+      },
+      {
+        "id": "waterworks",
+        "api": "waterworks",
+        "name": "Waterworks",
+        "rate": [
+          4.11,
+          1.98,
+          1.28,
+          1.18
+        ]
+      }
+    ]
+  },
+  {
+    "id": "event",
+    "name": "Event",
+    "data": [
+      {
+        "id": "santas-evil-lair",
+        "api": "santasevillair",
+        "name": "Santa's Evil Lair",
+        "rate": [
+          4.22,
+          1.85,
+          1.23,
+          1.16
+        ]
+      },
+      {
+        "id": "aperture",
+        "api": [
+          "achievement133",
+          "achievement134",
+          "achievement135",
+          "achievement136"
+        ],
+        "name": "Aperture",
+        "rate": [
+          5.15,
+          2.36,
+          1.36,
+          1.2
+        ]
+      },
+      {
+        "id": "abusement-park",
+        "api": "sideshow",
+        "name": "Abusement Park",
+        "rate": [
+          4.48,
+          2.14,
+          1.36,
+          1.22
+        ]
+      },
+      {
+        "id": "ice-cave",
+        "api": "icecave",
+        "name": "Ice Cave",
+        "rate": [
+          4.15,
+          1.95,
+          1.25,
+          1.18
+        ]
+      },
+      {
+        "id": "hellride",
+        "api": "hellride",
+        "name": "Hellride",
+        "rate": [
+          3.19,
+          1.72,
+          1.16,
+          1.06
+        ]
+      },
+      {
+        "id": "hillbilly-horror",
+        "api": "hillbilly",
+        "name": "Hillbilly Horror",
+        "rate": [
+          3.07,
+          1.52,
+          1.08,
+          1.02
+        ]
+      },
+      {
+        "id": "moonbase",
+        "api": [
+          "hereistous",
+          "attemptingreentry",
+          "amusingdeath",
+          "agiantstepbackforhumanity"
+        ],
+        "name": "Moonbase",
+        "rate": [
+          4.96,
+          1.92,
+          1.09,
+          1
+        ]
+      },
+      {
+        "id": "steamland",
+        "api": "steamland",
+        "name": "Steamland",
+        "rate": [
+          2.67,
+          1.39,
+          0.99,
+          0.95
+        ]
+      },
+      {
+        "id": "fright-yard",
+        "api": "frightyard",
+        "name": "Fright Yard",
+        "rate": [
+          2.26,
+          1.43,
+          0.91,
+          0.86
+        ]
+      },
+      {
+        "id": "hell",
+        "api": "hell",
+        "name": "Hell",
+        "rate": [
+          1.98,
+          1.14,
+          0.81,
+          0.75
+        ]
+      },
+      {
+        "id": "forgotten",
+        "api": "forgotten",
+        "name": "Forgotten",
+        "rate": [
+          1.93,
+          1.17,
+          0.82,
+          0.75
+        ]
+      },
+      {
+        "id": "sirens-belch",
+        "api": "sirensbelch",
+        "name": "Siren's Belch",
+        "rate": [
+          1.45,
+          0.93,
+          0.67,
+          0.64
+        ]
+      },
+      {
+        "id": "stronghold",
+        "api": "stronghold",
+        "name": "Stronghold",
+        "rate": [
+          1.36,
+          0.87,
+          0.66,
+          0.63
+        ]
+      },
+      {
+        "id": "transit",
+        "api": "transit",
+        "name": "Transit",
+        "rate": [
+          1.44,
+          0.96,
+          0.7,
+          0.65
+        ]
+      },
+      {
+        "id": "clandestine",
+        "api": "clandestine",
+        "name": "Clandestine",
+        "rate": [
+          1.05,
+          0.72,
+          0.58,
+          0.55
+        ]
+      },
+      {
+        "id": "thrillschills",
+        "api": "thrillschills",
+        "name": "Thrills and Chills",
+        "rate": [
+          1.02,
+          0.67,
+          0.51,
+          0.5
+        ]
+      }
+    ]
+  },
+  {
+    "id": "objective",
+    "name": "Objective",
+    "data": [
+      {
+        "id": "kfo-steamland",
+        "api": "steamlandobj",
+        "name": "Steamland",
+        "kfo": true,
+        "rate": [
+          2.66,
+          1.13,
+          0.9,
+          0.85
+        ]
+      },
+      {
+        "id": "kfo-fright-yard",
+        "api": "frightyardobj",
+        "name": "Fright Yard",
+        "kfo": true,
+        "rate": [
+          1.81,
+          1,
+          0.77,
+          0.74
+        ]
+      },
+      {
+        "id": "kfo-transit",
+        "api": "transitobj",
+        "name": "Transit",
+        "kfo": true,
+        "rate": [
+          1.37,
+          0.98,
+          0.62,
+          0.6
+        ]
+      }
+    ]
+  },
+  {
+    "id": "compilation",
+    "name": "Compilation",
+    "data": [
+      {
+        "id": "comp-core",
+        "api": "allmaps",
+        "name": "Core",
+        "nohoe": true,
+        "rate": [
+          4.5,
+          2.09,
+          1.31,
+          -1
+        ]
+      },
+      {
+        "id": "comp-summer-2009",
+        "api": "all3summermaps",
+        "name": "Summer 2009",
+        "nohoe": true,
+        "rate": [
+          2.55,
+          1.72,
+          1.28,
+          -1
+        ]
+      },
+      {
+        "id": "comp-cake",
+        "api": [
+          "completenewachievementsnormal",
+          "completenewachievementshard",
+          "completenewachievementssuicidal",
+          "completenewachievementshell"
+        ],
+        "name": "Grindhouse",
+        "rate": [
+          1.74,
+          1.35,
+          1.12,
+          1.08
+        ]
+      }
+    ]
+  }
+]

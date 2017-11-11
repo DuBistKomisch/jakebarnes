@@ -1,0 +1,1488 @@
+[
+  {
+    "id": "general",
+    "name": "General",
+    "data": [
+      {
+        "id": "its-not-easy-being-greasy",
+        "api": "killenemyusingbloatacid",
+        "icon": "83869d3f15ce7afe4ae829c1f1a96f61c8e17e1a",
+        "name": "It's Not Easy Being Greasy",
+        "description": "Cause a Specimen to Die by Luring them into Bloat Acid.",
+        "rate": 46.64
+      },
+      {
+        "id": "experimenticenticide",
+        "api": "killxenemies",
+        "icon": "7595469134375f7694cc2d29c95058eabb3e42d2",
+        "name": "Experimenticenticide",
+        "description": "Kill 100 Specimens.",
+        "rate": 46.2,
+        "max": 100,
+        "count": "kills"
+      },
+      {
+        "id": "social-outburst",
+        "api": "killxenemieswithgrenade",
+        "icon": "600d69cd647857320befc6b5f35fa61467563f34",
+        "name": "Social Outburst",
+        "description": "Kill 8 Specimens with One Grenade.",
+        "rate": 34.91,
+        "perk": "demolition"
+      },
+      {
+        "id": "experimentimillicide",
+        "api": "killxenemies2",
+        "icon": "20df7e6bd941af8909060e3e3949157d6760950b",
+        "name": "Experimentimillicide",
+        "description": "Kill 1,000 Specimens.",
+        "rate": 27.62,
+        "max": 1000,
+        "count": "kills"
+      },
+      {
+        "id": "straight-rush",
+        "api": "killpatriarchbeforeheheals",
+        "icon": "5d3066e2f58125db0e26e100fc8afea2b9d8083c",
+        "name": "Straight Rush",
+        "description": "Kill the Patriarch Before he has a Chance to Heal.",
+        "rate": 27.67
+      },
+      {
+        "id": "philanthropist",
+        "api": "donatexcashtoteammates",
+        "icon": "41354d3eddf6c5f9c2953a1a0b77f4e4ed7f8466",
+        "name": "Philanthropist",
+        "description": "Give 1,000 Pounds to Teammates who have 50% of Your Cash or Less.",
+        "rate": 23.63,
+        "max": 1000,
+        "count": "cashdonated"
+      },
+      {
+        "id": "self-medicator",
+        "api": "healselfxtimes",
+        "icon": "56685c1b47a57b7c0682629e7cbed3ac29ae1d60",
+        "name": "Self Medicator",
+        "description": "In Co-op Mode, Use Syringe on Yourself 100 Times.",
+        "rate": 21.03,
+        "max": 100,
+        "count": "selfheals",
+        "perk": "medic"
+      },
+      {
+        "id": "i-like-to-watch",
+        "api": "acquirexminutesofzedtime",
+        "icon": "9a41b0860a56f67f32dfdfa1435661f6999b0d44",
+        "name": "I Like To Watch",
+        "description": "Acquire 5 Minutes of \"Zed-Time\".",
+        "rate": 18.97,
+        "max": 300,
+        "count": "totalzedtime"
+      },
+      {
+        "id": "random-axe-of-kindness",
+        "api": "killxenemieswithfireaxe",
+        "icon": "068acc5a9c47ce81ff40deb098fd26162f91a60c",
+        "name": "Random Axe of Kindness",
+        "description": "Kill 15 Specimens with a Fire Axe in a Single Wave.",
+        "rate": 15.95,
+        "perk": "berserker"
+      },
+      {
+        "id": "homers-heroes",
+        "api": "killxsirens",
+        "icon": "fe4fcda587ee1f18fe1b119843eb5eadd309872c",
+        "name": "Homer's Heroes",
+        "description": "Kill 100 Sirens.",
+        "rate": 14.98,
+        "max": 100,
+        "count": "sirenkills"
+      },
+      {
+        "id": "too-close-for-comfort",
+        "api": "killfleshpoundwithmelee",
+        "icon": "e2eb0364ae4ff41954ecc542605cbc8de222b586",
+        "name": "Too Close For Comfort",
+        "description": "Finish off a Fleshpound using a Melee Attack.",
+        "rate": 15.29,
+        "perk": "berserker"
+      },
+      {
+        "id": "careful-spender",
+        "api": "kill4enemieswithhuntingshotgunshot",
+        "icon": "783418c0018fb6d9e5670d4080de1f2a67752d66",
+        "name": "Careful Spender",
+        "description": "Kill 4 Specimens with a Single Shot from a Hunting Shotgun.",
+        "rate": 12.19,
+        "perk": "support"
+      },
+      {
+        "id": "quarter-pounder-with-ease",
+        "api": "turnxfleshpoundsintogiblets",
+        "icon": "25ba09203237cd47b92233374d7bd5c7eccbcbab",
+        "name": "Quarter Pounder With Ease",
+        "description": "Turn 5 Fleshpounds into Giblets.",
+        "rate": 12.08,
+        "max": 5,
+        "count": "gibbedfleshpounds",
+        "perk": "demolition"
+      },
+      {
+        "id": "getting-chunky",
+        "api": "obliterate10zedswithpipebomb",
+        "icon": "8398bea0b74eb748a996177ac0b6306df5f40134",
+        "name": "Getting Chunky",
+        "description": "Obliterate 10 Zeds at once with the Pipe Bomb.",
+        "rate": 11.64,
+        "perk": "demolition"
+      },
+      {
+        "id": "fascist-dietitian",
+        "api": "killxbloats",
+        "icon": "ffd6dae0c00e35e453c9655b7aba2b73083b75da",
+        "name": "Fascist Dietitian",
+        "description": "Kill 200 Bloats.",
+        "rate": 11.78,
+        "max": 200,
+        "count": "bloatkills"
+      },
+      {
+        "id": "let-them-burn",
+        "api": "get1000burndamagewithmac10",
+        "icon": "03d719e87590c3e5e6b931b5d9193945e4cb3495",
+        "name": "Let Them Burn",
+        "description": "Get 1000 points of burn damage with the MAC-10.",
+        "rate": 12.36,
+        "max": 1000,
+        "count": "mac10burndamage",
+        "perk": "firebug"
+      },
+      {
+        "id": "keep-those-sneakers-off-the-floor",
+        "api": "killxstalkerswithexplosives",
+        "icon": "c0ffe600623971b1640bfb565a894b59f555bf47",
+        "name": "Keep Those Sneakers Off the Floor!",
+        "description": "Kill 20 Stalkers with Explosives.",
+        "rate": 11.09,
+        "max": 20,
+        "count": "stalkerskilledwithexplosives",
+        "perk": "demolition"
+      },
+      {
+        "id": "the-law-that-broke-the-camels-back",
+        "api": "killpatriarchwithlaw",
+        "icon": "1c00c23ff2df64f6db7f96b6d9e6702f7c74e53a",
+        "name": "The L.A.W. That Broke The Camel's Back",
+        "description": "Deliver the Killing Blow to the Patriarch with a L.A.W. Rocket.",
+        "rate": 10.47,
+        "perk": "demolition"
+      },
+      {
+        "id": "flaming-hell-that-was-close",
+        "api": "killhuskwithflamethrower",
+        "icon": "ad2be44ea13470264e1a7038a8839304ea4addd2",
+        "name": "Flaming Hell, That was Close",
+        "description": "As Firebug, kill the Husk with the Flamethrower before he hurts anyone.",
+        "rate": 10.89,
+        "perk": "firebug"
+      },
+      {
+        "id": "its-whats-inside-that-counts",
+        "api": "turnxenemiesintogiblets",
+        "icon": "f8c92abaf9eea11dfee55e2d985c1841d9a50fcc",
+        "name": "It's What's Inside That Counts",
+        "description": "Turn 500 Specimens into Giblets.",
+        "rate": 10.14,
+        "max": 500,
+        "count": "gibbedenemies",
+        "perk": "demolition"
+      },
+      {
+        "id": "experimentilottacide",
+        "api": "killxenemies3",
+        "icon": "312934b98ddaa4b5a841369fdb6aca046e927a05",
+        "name": "Experimentilottacide",
+        "description": "Kill 10,000 Specimens.",
+        "rate": 9.81,
+        "max": 10000,
+        "count": "kills"
+      },
+      {
+        "id": "thin-ice-pirouette",
+        "api": "onlysurvivorxwaves",
+        "icon": "d1df5ec9cfaf0f851dd0783126a7fe6af114753b",
+        "name": "Thin-Ice Pirouette",
+        "description": "Complete 10 Waves when the Rest of your Team has Died.",
+        "rate": 6.54,
+        "max": 10,
+        "count": "solesurvivorwaves"
+      },
+      {
+        "id": "master-surgeon",
+        "api": "medickillxenemieswithknife",
+        "icon": "cdd3ccb8acf79c79beb5ee79f039c1cabe20bb5b",
+        "name": "Master Surgeon",
+        "description": "As a Medic, Kill 8 Specimens using a Knife in a Single Wave.",
+        "rate": 6.12,
+        "perk": "medic"
+      },
+      {
+        "id": "killer-junior",
+        "api": "kill20crawlerskilledinair",
+        "icon": "81eada4d345278cacacb3e1435161773c4dddcf5",
+        "name": "Killer Junior",
+        "description": "Kill 20 crawlers in mid-air with the M79 (explosive kill).",
+        "rate": 5.01,
+        "max": 20,
+        "count": "crawlerskilledinmidair",
+        "perk": "demolition"
+      },
+      {
+        "id": "bitter-irony",
+        "api": "killxscrakeswithchainsaw",
+        "icon": "f40990e0d352bc19d2a4f26ee27ac2a501848893",
+        "name": "Bitter Irony",
+        "description": "Kill 2 Scrakes with a Chainsaw in a Single Wave.",
+        "rate": 4.65,
+        "perk": "berserker"
+      },
+      {
+        "id": "healing-touch",
+        "api": "heal200teammateswithmp7",
+        "icon": "223e39afb698e436a76d945f81bf583940ded108",
+        "name": "Healing Touch",
+        "description": "Heal 200 teammates with the MP7's medication dart.",
+        "rate": 4.23,
+        "max": 200,
+        "count": "teammateshealedwithmp7",
+        "perk": "medic"
+      },
+      {
+        "id": "hot-cross-fun",
+        "api": "killxburningenemieswithcrossbow",
+        "icon": "521e4f3239ac7262800fbf0b0dc7c23f758b712c",
+        "name": "Hot Cross Fun",
+        "description": "Kill 25 Burning Specimens with a Crossbow.",
+        "rate": 4.38,
+        "max": 25,
+        "count": "burningcrossbowkills",
+        "perk": "sharpshooter",
+        "tips": [
+          "Get a team mate to light specimens on fire before you shoot them.",
+          "It is also possible to use the MAC-10 as Firebug then quickly switch to the Crossbow."
+        ]
+      },
+      {
+        "id": "scard",
+        "api": "kill1000zedswithscar",
+        "icon": "bcefd9d9db70871f941b6b1f02148515cecc7d0d",
+        "name": "SCAR'd",
+        "description": "Kill 1000 Specimens with the SCAR.",
+        "rate": 4.22,
+        "max": 1000,
+        "count": "enemieskilledwithscar",
+        "perk": "commando"
+      },
+      {
+        "id": "death-to-the-mad-scientist",
+        "api": "defeatpatriarchonsuicidal",
+        "icon": "041fdb9b287a21b9d3311914db2aa6b4b3001893",
+        "name": "Death To The Mad Scientist",
+        "description": "Defeat the Patriarch on Suicidal.",
+        "rate": 3.98
+      },
+      {
+        "id": "blooper-reel",
+        "api": "gib500zedswithm79",
+        "icon": "85bc1602e33b63e6f08ec1876c6bf0331fe9a558",
+        "name": "Blooper Reel",
+        "description": "Turn 500 Zeds into Giblets using the M79.",
+        "rate": 3.59,
+        "perk": "demolition",
+        "max": 500,
+        "count": "enemiesgibbedwithm79",
+        "tips": [
+          "Only works in solo mode!"
+        ]
+      },
+      {
+        "id": "merry-men",
+        "api": "killpatriarchonlycrossbows",
+        "icon": "09f2bec304e5d3ed79753d620d9b8cc0f614ca3e",
+        "name": "Merry Men",
+        "description": "Kill the Patriarch when everyone is ONLY using Crossbows.",
+        "rate": 3.32,
+        "perk": "sharpshooter",
+        "tips": [
+          "Playing in solo mode still counts, so just finish him off with the crossbow alone."
+        ]
+      },
+      {
+        "id": "pound-this",
+        "api": "kill100fleshpoundswithaa12",
+        "icon": "d58e3270113c800c78b9c15556484cc1a9cde3fc",
+        "name": "Pound This",
+        "description": "Kill 100 Fleshpounds with the AA12.",
+        "rate": 2.48,
+        "max": 100,
+        "count": "fleshpoundskilledwithaa12",
+        "perk": "support"
+      },
+      {
+        "id": "explosive-personality",
+        "api": "kill1000enemieswithpipebomb",
+        "icon": "0fab02f7639d82bd6ed85cf382cba86714a99cdd",
+        "name": "Explosive Personality",
+        "description": "As Demolitions, kill 1000 Specimens with the Pipebomb.",
+        "rate": 1.92,
+        "max": 1000,
+        "count": "demolitionspipebombkills",
+        "perk": "demolition"
+      },
+      {
+        "id": "mr-perky",
+        "api": "maxoutallperks",
+        "icon": "1a74a4d0e91340a8e6bd6b8e11dc2285acbf8589",
+        "name": "Mr. Perky",
+        "description": "Get All of your Perks up to Level 5.",
+        "rate": 2.05
+      },
+      {
+        "id": "dot-of-doom",
+        "api": "lasersightedebrheadshots25inarow",
+        "icon": "409376e60993d8fadf4a5ca4c1d285916e34ff02",
+        "name": "Dot of Doom",
+        "description": "Get 25 headshots in a row with the EBR while using the Laser Sight.",
+        "rate": 1.64,
+        "perk": "sharpshooter",
+        "tips": [
+          "Don't forget to alt-fire to switch on the laser sight first.",
+          "The only real way to get this is to have a team mate take care of enemies like crawlers and stalkers which are hard to headshot, while you focus on clots, gorefasts, bloats and sirens."
+        ]
+      },
+      {
+        "id": "dignity-for-the-dead",
+        "api": "killxenemiesfeedingoncorpses",
+        "icon": "929c119ba322cdf63be6e4b481c5f2c4a6f9a4f1",
+        "name": "Dignity for the Dead",
+        "description": "Kill 10 Specimens Feeding on Dead Teammates Corpses.",
+        "rate": 1.56,
+        "max": 10,
+        "count": "feedingkills",
+        "tips": [
+          "Very picky/buggy. There must be a wall between you and the specimens so they don't break out of the animation.",
+          "You can only get it by bouncing a grenade off another wall or being extremely quick to shoot when going around the corner."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "april-fools",
+    "name": "April Fools",
+    "children": [
+      {
+        "id": "april-fools-2011",
+        "name": "2011 – Potato Fools",
+        "data": [
+          {
+            "id": "golden-potato",
+            "api": "achievement137",
+            "icon": "6fec2df9c6ab87f6a76dcc57eef788cbfa4a96f5",
+            "name": "Golden Potato",
+            "description": "Get into GLaDOS' core on Aperture.",
+            "rate": 2.66,
+            "event": true,
+            "tips": [
+              "Unweld the door in the central room of <a href=\"#aperture\">Aperture</a>.",
+              "Best with at least 2 players, with 1 distracting the final Zed of the wave."
+            ]
+          },
+          {
+            "id": "uber-tuber",
+            "api": "achievement132",
+            "icon": "366d6ee5bd659841507fc9fd5de687ef1eeb92a5",
+            "name": "Uber Tuber",
+            "description": "Expensive but delicious! Brought to you by Dr. Dougley and Lord Ned.",
+            "rate": 1.99,
+            "event": true,
+            "tips": [
+              "Buy the Potato weapon which costs £70,000.",
+              "Does not work in solo mode!",
+              "To do legitimately, you need several players all going berserker on a long beginner game and collecting weapons to sell."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summer",
+    "name": "Summer",
+    "children": [
+      {
+        "id": "summer-2011",
+        "name": "2011 – Summer Sideshow",
+        "data": [
+          {
+            "id": "ringmaster",
+            "api": "killsideshowpatriarch",
+            "icon": "100321aa0c3c48f153dd75a0a9a18252f2701c93",
+            "name": "Ringmaster",
+            "description": "Kill the \"Ring Leader\" (Circus Patriarch)",
+            "rate": 23.51,
+            "event": true
+          },
+          {
+            "id": "clearing-clown-alley",
+            "api": "kill5sideshowbloats",
+            "icon": "b9c697a092c9a9882499f007b24b9397a915bd0e",
+            "name": "Clearing Clown Alley",
+            "description": "Kill 5 Circus Bloats in one game.",
+            "rate": 20.25,
+            "event": true
+          },
+          {
+            "id": "small-hands",
+            "api": "kill3sideshowclotswithlar",
+            "icon": "2bd28a76c391a7c31a0a98e4d316503fccf5b823",
+            "name": "Small Hands",
+            "description": "Kill 3 Circus Clots in a wave with the Lever Action Rifle.",
+            "rate": 19.58,
+            "event": true,
+            "perk": "sharpshooter"
+          },
+          {
+            "id": "sparring-with-a-master",
+            "api": "killsideshowgorefastwithmelee",
+            "icon": "e4b458bc9b18e0f769c63697f095cfb84b7894cb",
+            "name": "Sparring with a Master",
+            "description": "Kill a Circus Gorefast with a Melee weapon.",
+            "rate": 17.95,
+            "event": true,
+            "perk": "berserker"
+          },
+          {
+            "id": "seeing-double",
+            "api": "kill5sideshowcrawlerswithbullpup",
+            "icon": "9c39b2960ec8e72f2479e90b35b44fe6cdc60ad5",
+            "name": "Seeing Double",
+            "description": "Kill 5 Circus Crawlers with a Bullpup in one wave.",
+            "rate": 12.79,
+            "event": true,
+            "perk": "commando"
+          },
+          {
+            "id": "windjammer-enthusiast",
+            "api": "survivesideshowsirenscreamplus10sec",
+            "icon": "e5c63e808400cd45c47eb5b0e3b7116aac994b45",
+            "name": "Windjammer Enthusiast",
+            "description": "Survive 10 seconds after being screamed at by at Circus Siren on Hard or above.",
+            "rate": 11.55,
+            "event": true
+          },
+          {
+            "id": "elephant-gun",
+            "api": "killsideshowfleshpoundwithpistol",
+            "icon": "455a11ba7d1e4c05139308bb5fdf79b718467cc3",
+            "name": "Elephant Gun",
+            "description": "Land the killing blow on a Circus Fleshpound with a Pistol.",
+            "rate": 11.88,
+            "event": true,
+            "perk": "sharpshooter"
+          },
+          {
+            "id": "the-big-hunt",
+            "api": "killsideshowscrakewithcrossbow",
+            "icon": "fa9aa734c5fb45cb5d5ee23db2592305508cf3ba",
+            "name": "The Big Hunt",
+            "description": "Kill a Circus Scrake with a Crossbow.",
+            "rate": 9.18,
+            "event": true,
+            "perk": "sharpshooter"
+          },
+          {
+            "id": "burning-up-the-midway",
+            "api": "kill10sideshowclotswithfireweapon",
+            "icon": "fc6b4134a63b6ec8ac45ffd4f14cd492ff41229e",
+            "name": "Burning up the Midway",
+            "description": "Kill 10 Circus Clots with a Fire-based weapon.",
+            "rate": 9.04,
+            "event": true,
+            "perk": "firebug"
+          },
+          {
+            "id": "taking-down-the-big-top",
+            "api": "meleekill4sideshowzedsinoneslomo",
+            "icon": "bb80b572b6641a52f3d97c9cf54866b3a4c367b4",
+            "name": "Taking Down the Big Top",
+            "description": "Kill 4 Circus Zeds in 1 ZED time chain with a Melee weapon.",
+            "rate": 8.89,
+            "event": true,
+            "perk": "berserker"
+          },
+          {
+            "id": "assistant-homicide",
+            "api": "kill2sideshowstalkerwithbackstab",
+            "icon": "30632da4bb9bfd3428780cbf440db6e87ea7d4c9",
+            "name": "Assistant Homicide",
+            "description": "Kill 2 Circus Stalkers with a Melee weapon to the back in one wave.",
+            "rate": 3.67,
+            "event": true,
+            "perk": "berserker",
+            "tips": [
+              "It is easiest to reach their back while they are targeting a team mate."
+            ]
+          },
+          {
+            "id": "lifting-a-dumbell",
+            "api": "killsideshowhuskwithlaw",
+            "icon": "24e53a657c0564f21844a97a124360b71a731b72",
+            "name": "Lifting a Dumbell",
+            "description": "Kill a Circus Husk with a LAW.",
+            "rate": 2.96,
+            "event": true,
+            "perk": "demolition"
+          },
+          {
+            "id": "punkd",
+            "api": "unlock10ofsideshowachievements",
+            "icon": "8832e3d39419b8a39fd5b36b6c533f34ae024faf",
+            "name": "Punk'd",
+            "description": "Unlock 10 of the 13 Circus Achievements along with any Abusement Park achievement.",
+            "rate": 2.74,
+            "event": true,
+            "tips": [
+              "Requires at least 10 of <a href=\"#ringmaster\">Ringmaster</a>, <a href=\"#sparring-with-a-master\">Sparring with a Master</a>, <a href=\"#assistant-homicide\">Assistant Homicide</a>, <a href=\"#seeing-double\">Seeing Double</a>, <a href=\"#clearing-clown-alley\">Clearing Clown Alley</a>, <a href=\"#the-big-hunt\">The Big Hunt</a>, <a href=\"#lifting-a-dumbell\">Lifting a Dumbell</a>, <a href=\"#small-hands\">Small Hands</a>, <a href=\"#elephant-gun\">Elephant Gun</a>, <a href=\"#juggling-act\">Juggling Act</a>, <a href=\"#windjammer-enthusiast\">Windjammer Enthusiast</a>, <a href=\"#taking-down-the-big-top\">Taking Down the Big Top</a>, and <a href=\"#burning-up-the-midway\">Burning up the Midway</a>.",
+              "You also have to beat <a href=\"#abusement-park\">Abusement Park</a> on at least normal difficulty."
+            ]
+          },
+          {
+            "id": "juggling-act",
+            "api": "drop5tier2weaponsonewavesideshow",
+            "icon": "9eaf229479791927953ea02841fdf761c204f0f6",
+            "name": "Juggling Act",
+            "description": "Drop 5 different Tier 2 weapons in one wave.",
+            "rate": 2.37,
+            "tips": [
+              "The Fire Axe is the cheapest Tier 2 weapon, so play as berserker and save up enough to buy and drop 5 of them during one trading time."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "summer-2012",
+        "name": "2012 – Summer Sideshow",
+        "data": [
+          {
+            "id": "british-superiority",
+            "api": "killzedwithsa80andfnfal",
+            "icon": "3484e9646fd20dd2e2785a9330d863e2ae698d76",
+            "name": "British Superiority",
+            "description": "Kill a zed each with both the Bullpup and FN-Fal",
+            "rate": 14.86,
+            "perk": "commando"
+          },
+          {
+            "id": "combat-medic",
+            "api": "killzedthathurtplayerwithm7a3",
+            "icon": "6ebcfc5675bf231d0954f78e93938f8b95980deb",
+            "name": "Combat Medic",
+            "description": "Kill a zed that has injured a player (M7A3 rifle)",
+            "rate": 10.71,
+            "perk": "medic"
+          },
+          {
+            "id": "spec-ops",
+            "api": "kill12clotswithonemagwithmk23",
+            "icon": "d8ced0c566d1172f02084d304a40deaccf40a813",
+            "name": "Spec Ops",
+            "description": "Kill 12 clots with one magazine without reloading (MK23)",
+            "rate": 4.7,
+            "perk": "sharpshooter"
+          },
+          {
+            "id": "the-big-one",
+            "api": "kill2scrakesonebulletwithbarret",
+            "icon": "a65c3810ba8c9507f3b0f894f6912226f1e25b0d",
+            "name": "The Big One",
+            "description": "Kill 2 scrakes with one shot (M99)",
+            "rate": 2.04,
+            "perk": "sharpshooter"
+          },
+          {
+            "id": "fugly",
+            "api": "killoneofeachzedswithksg",
+            "icon": "d0e61219d6b27b09dd32efee6468a1063a269a09",
+            "name": "Fugly",
+            "description": "Kill one of each type of zed in one round (HSG Shotgun)",
+            "rate": 1.62,
+            "perk": "support"
+          }
+        ]
+      },
+      {
+        "id": "summer-2013",
+        "name": "2013 – Pier Of Pain",
+        "data": [
+          {
+            "id": "assault-flayer-ordinance",
+            "api": "pushscrakespj",
+            "icon": "d564f704eb13c8a3e1d9a1a7e31cd051c4ed2804",
+            "name": "Assault Flayer Ordinance",
+            "description": "Push a scrake back with the direct fire from a Hunting Shotgun or alt fire from the Multi-Chamber ZED Thrower",
+            "rate": 9.46,
+            "perk": "support"
+          },
+          {
+            "id": "single-load-doom-bombardier",
+            "api": "killzedwithimpactspg",
+            "icon": "a5e3f51c21abfc318bbc6cf3d6585c8e5cafd900",
+            "name": "Single-Load Doom Bombardier",
+            "description": "Kill a ZED with a direct (unexploded) shot from the Orca Bomb Propeller or the M-79/M32",
+            "rate": 10.29,
+            "perk": "demolition",
+            "tips": [
+              "If the shot hits a zed while within a certain distance from you, it won't explode but still do direct damage to the specimen it hits."
+            ]
+          },
+          {
+            "id": "guardian-assault-protector",
+            "api": "defendringmaster",
+            "icon": "a8d779082e6f4bc3ec37bcee2ed75da80a75e56d",
+            "name": "Guardian Assault Protector",
+            "description": "Protect the ringmaster during the defense mission so that he does not get hit more than 15 times",
+            "rate": 4.25
+          },
+          {
+            "id": "golden-3-crown-note",
+            "api": "nocarrierdamagegoldbars",
+            "icon": "a31ba7b0cfb0199262e179e8d9575e8e0f8d3fc9",
+            "name": "Golden 3 Crown Note",
+            "description": "Get all 3 gold bars without the carriers taking damage while they have them",
+            "rate": 2.09
+          },
+          {
+            "id": "arcade-gamer",
+            "api": "completearcadegames",
+            "icon": "4f4c0a376df41fe1b72dc00ad7dfd7b6fff637dc",
+            "name": "Arcade Gamer",
+            "description": "Complete the Pop the Clot, the Strong Man and the Grenade Toss games",
+            "rate": 2.19,
+            "tips": [
+              "These can be found within the central area of theme park in <a href=\"#steamland\">Steamland</a>.",
+              "It is easiest to complete this while the Ringmaster is waiting to be healed the first time in objective mode.",
+              "Pop the Clot: simply destroy all the clot heads.",
+              "Strong Man: throw a regular grenade onto the plate on the ground.",
+              "Grenade Toss: throw a regular grenade into each hole."
+            ]
+          },
+          {
+            "id": "single-shot-equalizer",
+            "api": "getheadshotson4zedssps",
+            "icon": "8e98c069d4fdcc59f76527a4da418a27830f35b0",
+            "name": "Single-shot Equalizer",
+            "description": "Kill 4 different types of Zeds with headshots with 4 shots from the Long Musket or the M14 without reloading",
+            "rate": 4.8,
+            "perk": "sharpshooter"
+          },
+          {
+            "id": "full-charge",
+            "api": "allbreakersactive",
+            "icon": "fec10f9df23bc87c77a71e03f80e8fb732c47872",
+            "name": "Full Charge",
+            "description": "Have 5 Breaker Boxes 100% repaired at the same time",
+            "rate": 2.69
+          },
+          {
+            "id": "extended-motion-protector",
+            "api": "escortringmaster",
+            "icon": "b0584034cd25db326e596b8ec7f7e529a6ab1f89",
+            "name": "Extended Motion Protector",
+            "description": "Protect the Ringmaster during the escort mission so that he does not get hit more than 15 times",
+            "rate": 2.63
+          },
+          {
+            "id": "hide-and-go-puke",
+            "api": "destroypukeydolls",
+            "icon": "78a652c1b47943ec04b8df2dca0c9c1d433b64f3",
+            "name": "Hide and go Puke",
+            "description": "Destroy all the Pukey the Clown dolls",
+            "rate": 1.89,
+            "tips": [
+              "It is easiest to complete this while the Ringmaster is waiting to be healed the first time in objective mode.",
+              "<a href=\"https://www.youtube.com/watch?v=Okv6D_58w_Y\">A video guide to the locations</a> by TMPGames."
+            ]
+          },
+          {
+            "id": "turbo-executioner",
+            "api": "kill5zedsinzedtimenoreloadspt",
+            "icon": "a753c8a57a7db2a94a2299e78f86c894b2d6b225",
+            "name": "Turbo Executioner",
+            "description": "Kill 5 zeds in ZED time without reloading with Dr. T's LDS or Bullpup",
+            "rate": 2.21,
+            "perk": "commando"
+          },
+          {
+            "id": "mrs-punkd",
+            "api": "completespmrsfosterachievements",
+            "icon": "372b78c8dd3d2e6c99372a0695edaff20ea4b833",
+            "name": "Mrs. Punkd",
+            "description": "Get 4 of 6 of the 2013 Summer Event in-game level Achievements, one Standard and one Objective Mode map completion Achievement, plus the Punk'd Achievement to unlock Steampunk Mrs. Foster",
+            "rate": 1.32,
+            "event": true,
+            "tips": [
+              "Requires <a href=\"#punkd\">Punk'd</a>.",
+              "Requires at least 4 of <a href=\"#hide-and-go-puke\">Hide and go Puke</a>, <a href=\"#arcade-gamer\">Arcade Gamer</a>, <a href=\"#full-charge\">Full Charge</a>, <a href=\"#guardian-assault-protector\">Guardian Assault Protector</a>, <a href=\"#extended-motion-protector\">Extended Motion Protector</a>, and <a href=\"#golden-3-crown-note\">Golden 3 Crown Note</a>.",
+              "You also have to beat Steamland in <a href=\"#steamland\">standard</a> and <a href=\"#kfo-steamland\">objective</a> mode on at least normal difficulty."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "summer-2014",
+        "name": "2014 – End Of The Line",
+        "data": [
+          {
+            "id": "oktoberfest-master",
+            "api": "destroybeersteins",
+            "icon": "56c45bb4c9da52c30cc3963c6d2feea065cce0f6",
+            "name": "Oktoberfest Master",
+            "description": "Collect all the Beer Steins",
+            "rate": 0.97,
+            "tips": [
+              "<a href=\"https://www.youtube.com/watch?v=n26l6JfIAJY\">A video guide to the locations</a> by TMPGames."
+            ]
+          },
+          {
+            "id": "rich-evil-uncle",
+            "api": "destroygoldbags",
+            "icon": "665e640f9b774b3cbf86ed05762ea8905d848489",
+            "name": "Rich Evil Uncle",
+            "description": "Collect all the Treasure Bags",
+            "rate": 0.78,
+            "tips": [
+              "<a href=\"https://www.youtube.com/watch?v=2pNISGNhxao\">A video guide to the locations</a> by TMPGames."
+            ]
+          },
+          {
+            "id": "nitro-boost",
+            "api": "nitroinxseconds",
+            "icon": "7b4adee17cff70733a1b91d22d68983b3ab97ee2",
+            "name": "Nitro Boost!",
+            "description": "Get the Nitro to the Objective in 135 seconds or less",
+            "rate": 1.88
+          },
+          {
+            "id": "totally-metal",
+            "api": "killxzedsduringweld",
+            "icon": "938bfefec4cf3acf86b5c481f04c8bd28b96ca00",
+            "name": "Totally Metal",
+            "description": "Kill 250 Zeds before completing the welding objective",
+            "rate": 2.38
+          },
+          {
+            "id": "multi-pass",
+            "api": "pickupdoorkey",
+            "icon": "4361f09d30dc059ec7522b87c33f5feb2624bb72",
+            "name": "Multi-pass",
+            "description": "Pick up the door key",
+            "rate": 4.98,
+            "tips": [
+              "Counts for all players when one person picks it up, so impossible to miss."
+            ]
+          },
+          {
+            "id": "science-hater",
+            "api": "destroydnavials",
+            "icon": "90a115c82fb10954fd4d3068848a48c8bf1645b6",
+            "name": "Science Hater",
+            "description": "Destroy all the DNA vials",
+            "rate": 1.56,
+            "tips": [
+              "Easier in normal mode than objective mode, because you can't go back to previous sections of the map. Some of the vials are also moved between modes.",
+              "<a href=\"https://www.youtube.com/watch?v=tBOWoolsEpw\">A video guide to the locations</a> by TMPGames."
+            ]
+          },
+          {
+            "id": "doctor-who",
+            "api": "completemsclamleyachievements",
+            "icon": "851ce452dddb84c5bbf1c94cb461e4090e2827ba",
+            "name": "Doctor WHO??",
+            "description": "Get all Objective achievements and beat KFO Transit on Hard or above to unlock Dr Rachel Clamely",
+            "rate": 0.91,
+            "tips": [
+              "Requires all 4 of <a href=\"#nitro-boost\">Nitro Boost!</a>, <a href=\"#totally-metal\">Totally Metal</a>, <a href=\"#multi-pass\">Multi-pass</a>, and <a href=\"#science-hater\">Science Hater</a>.",
+              "You also have to beat Transit in <a href=\"#kfo-transit\">objective</a> mode on at least hard difficulty."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "halloween",
+    "name": "Halloween",
+    "children": [
+      {
+        "id": "halloween-2011",
+        "name": "2011 – Halloween Sideshow",
+        "data": [
+          {
+            "id": "trick-not-treat",
+            "api": "kill5halloweenzedswithoutreload",
+            "icon": "ed78f627e2b589e177b7de6c93b3dd53b6804b56",
+            "name": "Trick, not Treat",
+            "description": "Kill 5 Halloween Specimens with any gun without reloading",
+            "rate": 26.36,
+            "event": true
+          },
+          {
+            "id": "carving-the-jack-o-lantern",
+            "api": "decapburninghalloweenzedinbedlam",
+            "icon": "4141d8592164ffeda39c4222f82b8510af6832a3",
+            "name": "Carving The Jack O' Lantern",
+            "description": "Decapitate a burning Halloween specimen in Bedlam",
+            "rate": 4.19,
+            "event": true
+          },
+          {
+            "id": "sparkling-in-the-twilight",
+            "api": "killhalloweenpatriarchinbedlam",
+            "icon": "d39573bcc4b8fbaf2d0b1f7cd252b44b538b3626",
+            "name": "Sparkling in the Twilight",
+            "description": "Kill The Vampire Patriarch Ringmaster in Bedlam",
+            "rate": 3.9,
+            "event": true
+          },
+          {
+            "id": "the-scene-is-zed",
+            "api": "kill250halloweenzedsinbedlam",
+            "icon": "1926700435c6bfe6b90eaec11339aa1e57416409",
+            "name": "The Scene is Zed",
+            "description": "Kill 250 Halloween Specimens in Bedlam",
+            "rate": 3.28,
+            "max": 250,
+            "count": "halloweenkills",
+            "event": true
+          },
+          {
+            "id": "zed-october",
+            "api": "winbedlamhardhalloween",
+            "icon": "ae62d14b77126ae53a5305cbc0ea24ae7aaee80e",
+            "name": "Zed October",
+            "description": "Win a Long Bedlam Match During the Halloween Event on Hard",
+            "rate": 1.83,
+            "event": true
+          },
+          {
+            "id": "this-is-no-ordinary-rabbit",
+            "api": "kill25halloweenscrakesinbedlam",
+            "icon": "bec243240fbe24309a4aae44d90dd5362acfc8dc",
+            "name": "This is No Ordinary Rabbit!",
+            "description": "Kill 25 Halloween Scrakes in Bedlam",
+            "rate": 1.45,
+            "max": 25,
+            "count": "halloweenscrakekills",
+            "event": true
+          },
+          {
+            "id": "rule-the-roost",
+            "api": "unlock6ofhalloweenachievements",
+            "icon": "6a4d61d0b04614ee837eb4e8c5039912de628f4a",
+            "name": "Rule The Roost",
+            "description": "Get all 6 achievements and unlock Commando Chicken",
+            "rate": 1.38,
+            "event": true,
+            "tips": [
+              "Requires <a href=\"#trick-not-treat\">Trick, not Treat</a>, <a href=\"#carving-the-jack-o-lantern\">Carving The Jack O' Lantern</a>, <a href=\"#sparkling-in-the-twilight\">Sparkling in the Twilight</a>, <a href=\"#the-scene-is-zed\">The Scene is Zed</a>, <a href=\"#zed-october\">Zed October</a>, and <a href=\"#this-is-no-ordinary-rabbit\">This is No Ordinary Rabbit!</a>."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "halloween-2012",
+        "name": "2012 – Hillbilly Horrors",
+        "data": [
+          {
+            "id": "historical-remnants",
+            "api": "kill6zedwithoutreloadingmkb42",
+            "icon": "22e824a06d2d3559ac712adf7492028625fa8f41",
+            "name": "Historical Remnants",
+            "description": "Kill 6 Zeds with one magazine on an MKb42, without reloading",
+            "rate": 15.77,
+            "perk": "commando"
+          },
+          {
+            "id": "naild",
+            "api": "kill4stalkersnailgun",
+            "icon": "8bd48b7d4e85d07ae490eea16adc5415134b807d",
+            "name": "Nail'd!",
+            "description": "Kill 4 Stalkers in a game with the Vlad9000 Nailgun",
+            "rate": 7.55,
+            "perk": "support"
+          },
+          {
+            "id": "meet-your-maker",
+            "api": "kill1000hillbillyzeds",
+            "icon": "f6036f9204c1c311d93be829c083d6d810134b76",
+            "name": "Meet Your Maker!",
+            "description": "Kill 1000 Hillbilly Zeds",
+            "rate": 9.76,
+            "max": 1000,
+            "count": "zedkilledduringhillbilly",
+            "event": true
+          },
+          {
+            "id": "soul-collector",
+            "api": "destroy25gnomesinhillbilly",
+            "icon": "c66847dc8c01592229fd7aa9ad151eafc7a7253a",
+            "name": "Soul Collector",
+            "description": "Free the souls of the 25 Gnomes hidden on Hillbilly Horror in 1 game",
+            "rate": 3.08,
+            "event": true,
+            "tips": [
+              "<a href=\"https://www.youtube.com/watch?v=kk8zoJN_AfY\">A video guide to the locations</a> by snaphappy7530."
+            ]
+          },
+          {
+            "id": "fiery-personality",
+            "api": "set3hillbillygorefastsonfire",
+            "icon": "74956cb7f565f94a4e225de93b2dafa1cf25b30b",
+            "name": "Fiery Personality",
+            "description": "Set 3 Hillbilly Gorefasts on fire with the Flare Pistol or Trench Gun",
+            "rate": 6.47,
+            "perk": "firebug",
+            "event": true
+          },
+          {
+            "id": "i-am-become-death",
+            "api": "kill5hillbillyzedsin10secssythoraxe",
+            "icon": "5b9a85fb9055ea2f9b07f5dfdfb8585c0f33b694",
+            "name": "I Am Become Death",
+            "description": "Kill 5 Hillbilly Zeds in 10 seconds with the Scythe or Axe",
+            "rate": 7.48,
+            "perk": "berserker",
+            "event": true
+          },
+          {
+            "id": "creepy-crawlies",
+            "api": "kill15hillbillycrawlersthomormkb",
+            "icon": "63cf64cea635a4feda153869e190e34773e65992",
+            "name": "Creepy Crawlies",
+            "description": "Kill 15 Hillbilly Crawlers in 1 game with the Tommy Gun or MKb42",
+            "rate": 3.87,
+            "perk": "commando",
+            "event": true
+          },
+          {
+            "id": "rippin-it-up",
+            "api": "kill1hillbilly1huskandzedin1shot",
+            "icon": "a4e15ec7bcd6492594c7daac372bd36e7e3abd20",
+            "name": "Rippin' It Up",
+            "description": "Kill a Hillbilly Husk and another Hillbilly Zed in the same shot with the Buzzsaw Bow or M99",
+            "rate": 2.91,
+            "event": true
+          },
+          {
+            "id": "grim-reaper",
+            "api": "complete6reaperachievements",
+            "icon": "67290efd2abb01e9dbdc3aa8301d0d0e5cf67691",
+            "name": "Grim Reaper",
+            "description": "Get the 6 Special Halloween Achievements plus 1 Hillbilly Horror Map Achievement to unlock the Grim Reaper",
+            "rate": 1.67,
+            "event": true,
+            "tips": [
+              "Requires <a href=\"#meet-your-maker\">Meet Your Maker!</a>, <a href=\"#soul-collector\">Soul Collector</a>, <a href=\"#fiery-personality\">Fiery Personality</a>, <a href=\"#i-am-become-death\">I Am Become Death</a>, <a href=\"#creepy-crawlies\">Creepy Crawlies</a>, and <a href=\"#rippin-it-up\">Rippin' It Up</a>.",
+              "You also have to beat <a href=\"#hillbilly-horror\">Hillbilly Horror</a> on at least normal difficulty."
+            ]
+          },
+          {
+            "id": "trench-warfare",
+            "api": "set200zedonfireinhillbilly",
+            "icon": "7615489f3109fccc634969417aab4af18b0fe1c0",
+            "name": "Trench Warfare",
+            "description": "Set a total of 200 Zeds on fire with the Trench Gun in Hillbilly Horror",
+            "rate": 1.46,
+            "max": 200,
+            "count": "zedsetfirewithtrenchonhillbilly",
+            "perk": "firebug",
+            "tips": [
+              "Specifically setting on fire, not killing, so play on a higher difficulty and try not to aim for the head."
+            ]
+          },
+          {
+            "id": "explosion-of-love",
+            "api": "healallplayerswith1medicnade",
+            "icon": "18a3d7e78b507eac2946b88229e6d957c3f495d8",
+            "name": "Explosion of Love",
+            "description": "Heal yourself plus 5 other players with one grenade",
+            "rate": 1.98,
+            "perk": "medic"
+          }
+        ]
+      },
+      {
+        "id": "halloween-2013",
+        "name": "2013 – Fright Yard",
+        "data": [
+          {
+            "id": "777",
+            "api": "777",
+            "icon": "7050d94c5bf822758c8f194e4d4a2dbd9795fcf7",
+            "name": "777",
+            "description": "Win Fuel on the first try",
+            "rate": 1.11,
+            "tips": [
+              "Basically down to luck. Only the first try of each machine counts, so you only get 2 chances per run.",
+              "The map KF-777 on the Steam workshop lets you cheat by spawning many more slot machines."
+            ]
+          },
+          {
+            "id": "ex-scientist",
+            "api": "exscientist",
+            "icon": "bcb2b7b4a0f22dd527cb24700b2f165e05062b4e",
+            "name": "Ex-scientist",
+            "description": "Collect all the bile without a contamination",
+            "rate": 2.47,
+            "tips": [
+              "This means 0/3 other Zeds falling into the pit, not getting it on the first try."
+            ]
+          },
+          {
+            "id": "blinding-big-brother",
+            "api": "blindingbigbrother",
+            "icon": "8a112f7400cb93a87da0c99e3c8225ed0a5e2957",
+            "name": "Blinding Big Brother",
+            "description": "Destroy all 30 Cameras",
+            "rate": 1.4,
+            "tips": [
+              "Easier in normal mode than objective mode, because you can't go back to previous sections of the map.",
+              "<a href=\"https://www.youtube.com/watch?v=JgYSZUvgjaI\">A video guide to the locations</a> by TMPGames."
+            ]
+          },
+          {
+            "id": "under-the-weather",
+            "api": "bileorflameeachzed",
+            "icon": "36319c7285d3d9d1900ab4ae4f7aeaf72b88781c",
+            "name": "Under The Weather",
+            "description": "Use Bile or the Flamethrower to kill one of each Halloween Zed",
+            "rate": 1.18,
+            "event": true,
+            "perk": "firebug"
+          },
+          {
+            "id": "most-bang-for-the-buck",
+            "api": "kill10zedsseekerorm32in5secs",
+            "icon": "deed32e129411a7ec67d4ca20efb651a9e0932ae",
+            "name": "Most Bang for the Buck",
+            "description": "Kill 10 Halloween zeds in explosions using the Seeker 6 or the M32 within 5 seconds",
+            "rate": 2.34,
+            "event": true,
+            "perk": "demolition"
+          },
+          {
+            "id": "claw-machine-master",
+            "api": "clawmachinemaster",
+            "icon": "e6f799bbbd50520afcbd75184070bef4b17acb27",
+            "name": "Claw Machine Master",
+            "description": "Attach the crane hook within 125 seconds",
+            "rate": 2.97
+          },
+          {
+            "id": "fire-and-forget",
+            "api": "scrakeandfp1shotlawharpoon",
+            "icon": "b1b6dc84859b5d44a881ab7fec93ff2808ab263e",
+            "name": "Fire and Forget",
+            "description": "Kill a Halloween Fleshpound and Scrake in the same explosion with the Seal Squeal Harpoon Bomber or the LAW",
+            "rate": 1.11,
+            "event": true,
+            "perk": "demolition"
+          }
+        ]
+      },
+      {
+        "id": "halloween-2014",
+        "name": "2014 – Halloween Horror Double Feature",
+        "data": [
+          {
+            "id": "skull-cracker",
+            "api": "destroyskulls",
+            "icon": "392c97b6620e991b9ebe1e1767172fa17acc6693",
+            "name": "Skull Cracker",
+            "description": "Destroy all 30 Skulls",
+            "rate": 0.72,
+            "tips": [
+              "<a href=\"https://www.youtube.com/watch?v=qbFGinf6Ysc\">A video guide to the locations</a> by TMPGames."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "christmas",
+    "name": "Christmas",
+    "children": [
+      {
+        "id": "christmas-2010",
+        "name": "2010 – Twisted Christmas",
+        "data": [
+          {
+            "id": "who-brings-a-gun-to-a-snow-ball-fight",
+            "api": "killchristmashuskwithpistol",
+            "icon": "31350dba7ff054dbc9c866560e906d5be15e2919",
+            "name": "Who Brings a Gun to a Snow Ball Fight?",
+            "description": "Kill a Christmas Husk with any Pistol.",
+            "rate": 21.86,
+            "event": true,
+            "perk": "sharpshooter"
+          },
+          {
+            "id": "merry-friggin-christmas",
+            "api": "killchristmaspatriarch",
+            "icon": "555cae553ef16908e8cceba5db58f44d83c9381c",
+            "name": "Merry Friggin Christmas",
+            "description": "Kill the Christmas Patriarch.",
+            "rate": 21.6,
+            "event": true
+          },
+          {
+            "id": "back-to-work",
+            "api": "kill20christmasclots",
+            "icon": "c5f4c52cb808df05db42c103cdd190331f908db5",
+            "name": "Back to Work",
+            "description": "Kill 20 Christmas Clots in one wave.",
+            "rate": 18.68,
+            "event": true
+          },
+          {
+            "id": "rudolph-the-bloody-nosed-reindeer",
+            "api": "killchristmascrawlerwithxbow",
+            "icon": "ff7594a304c3a5f281fa5f8da553f025ef91b9d9",
+            "name": "Rudolph, the Bloody Nosed Reindeer",
+            "description": "Kill a Christmas Crawler with a Crossbow.",
+            "rate": 10.11,
+            "event": true,
+            "perk": "sharpshooter"
+          },
+          {
+            "id": "eggnog-anyone",
+            "api": "christmasvomitlive10seconds",
+            "icon": "8d247fb5166b9c96fb7b3e82fbadaf3d559b42a3",
+            "name": "Eggnog Anyone?",
+            "description": "Get covered in Christmas Bloat Bile and live for 10 seconds on Hard, Suicidal, or Hell on Earth.",
+            "rate": 9.44,
+            "event": true
+          },
+          {
+            "id": "fending-off-mrs-claws",
+            "api": "kill3christmasstalkerswithlar",
+            "icon": "197f449d619e06973a9d4a6658757444391a06cf",
+            "name": "Fending off Mrs. Claws",
+            "description": "Kill 3 Christmas Stalkers with a Lever Action Rifle without reloading.",
+            "rate": 8.4,
+            "event": true,
+            "perk": "sharpshooter"
+          },
+          {
+            "id": "toasted-jack-frost",
+            "api": "killchristmasscrakewithfire",
+            "icon": "0f9fda120e60128fbf5ca312c7834d403fe44f97",
+            "name": "Toasted Jack Frost",
+            "description": "Kill the Christmas Scrake with a Fire-based weapon.",
+            "rate": 8.6,
+            "event": true,
+            "perk": "firebug"
+          },
+          {
+            "id": "deck-the-halls-with-buckets-o-blood",
+            "api": "meleekill3christmaszedsinoneslomo",
+            "icon": "172bb21a87ab0bf02fd257a8f1708c5b7a640627",
+            "name": "Deck the Halls with Buckets o' Blood",
+            "description": "Kill 3 Christmas Zeds in 1 ZED time chain with a Melee weapon.",
+            "rate": 8.99,
+            "event": true,
+            "perk": "berserker"
+          },
+          {
+            "id": "cracked-the-nutcracker",
+            "api": "knifechristmasfleshpound",
+            "icon": "894dc78c13d9032e4dfcec2f5d360adb7996e610",
+            "name": "Cracked the Nutcracker!",
+            "description": "Land the killing blow on a Christmas Fleshpound with a Knife.",
+            "rate": 1.91,
+            "event": true,
+            "perk": "berserker"
+          },
+          {
+            "id": "cant-catch-me",
+            "api": "meleekill2christmasgorefastfromback",
+            "icon": "70c1248622aacec0e3e8fa9afe8949e1306769b4",
+            "name": "Can't Catch Me!",
+            "description": "Kill 2 Christmas Gorefasts with a Melee weapon from behind in one wave.",
+            "rate": 3.38,
+            "event": true,
+            "perk": "berserker",
+            "tips": [
+              "It is easiest to reach their back while they are targeting a team mate."
+            ]
+          },
+          {
+            "id": "bad-santa",
+            "api": "unlock10ofchristmasachievements",
+            "icon": "293a3f92df609444cfc992e2c649c98934fdae43",
+            "name": "Bad Santa",
+            "description": "Unlock 10 of the 13 Christmas Achievements along with any Christmas Map achievement.",
+            "rate": 1.99,
+            "event": true,
+            "tips": [
+              "Requires at least 10 of <a href=\"#merry-friggin-christmas\">Merry Friggin Christmas</a>, <a href=\"#tis-better-to-give-than-to-receive\">Tis Better to Give than to Receive</a>, <a href=\"#deck-the-halls-with-buckets-o-blood\">Deck the Halls with Buckets o' Blood</a>, <a href=\"#who-brings-a-gun-to-a-snow-ball-fight\">Who Brings a Gun to a Snow Ball Fight?</a>, <a href=\"#eggnog-anyone\">Eggnog Anyone?</a>, <a href=\"#back-to-work\">Back to Work</a>, <a href=\"#fending-off-mrs-claws\">Fending off Mrs. Claws</a>, <a href=\"#not-so-silent-night\">Not So Silent Night</a>, <a href=\"#cracked-the-nutcracker\">Cracked the Nutcracker!</a>, <a href=\"#cant-catch-me\">Can't Catch Me</a>, <a href=\"#toasted-jack-frost\">Toasted Jack Frost</a>, <a href=\"#rudolph-the-bloody-nosed-reindeer\">Rudolph, the Bloody Nosed Reindeer</a>, and <a href=\"#thats-not-santa\">That's not Santa!</a>.",
+              "You also have to beat at least 1 of <a href=\"#santas-evil-lair\">Santa's Evil Lair</a>, <a href=\"#ice-cave\">Ice Cave</a> and <a href=\"#moonbase\">Moonbase</a> on at least normal difficulty."
+            ]
+          },
+          {
+            "id": "tis-better-to-give-than-to-receive",
+            "api": "drop3tier3weaponsforotherschristmas",
+            "icon": "639df6179143cb53c310d78dc489353d0da27cd3",
+            "name": "Tis Better to Give than to Receive",
+            "description": "Drop 3 Tier 3 weapons for others (with which they kill at least one Christmas Zed).",
+            "rate": 2.2,
+            "max": 3,
+            "count": "droppedtier3weapons",
+            "event": true,
+            "tips": [
+              "Tier 3 weapons refers to the M14, AA12 and SCAR."
+            ]
+          },
+          {
+            "id": "not-so-silent-night",
+            "api": "killchristmassirenwithlawimpact",
+            "icon": "fb5b093771be90284616e907943252ef213fda84",
+            "name": "Not So Silent Night",
+            "description": "Kill a Christmas Siren with an undetonated LAW rocket.",
+            "rate": 1.69,
+            "event": true,
+            "perk": "demolition",
+            "tips": [
+              "If the shot hits a zed while within a certain distance from you, it won't explode but still do direct damage to the specimen it hits."
+            ]
+          },
+          {
+            "id": "thats-not-santa",
+            "api": "kill3christmasbloatswithbullpup",
+            "icon": "3741a30b3d5ae4feb49a411681c665bbe5e906e0",
+            "name": "That's not Santa!",
+            "description": "Kill 3 Christmas Bloats with the Bullpup in one wave.",
+            "rate": 2.04,
+            "event": true,
+            "perk": "commando"
+          }
+        ]
+      },
+      {
+        "id": "christmas-2011",
+        "name": "2011 – Twisted Christmas",
+        "data": [
+          {
+            "id": "bloody-yanks",
+            "api": "kill1xmaszedwithfullm4clip",
+            "icon": "7614ae4dcdfc542a0e8215a6fa16d19f80e0da35",
+            "name": "Bloody Yanks",
+            "description": "Kill 1 specimen ONLY while expending a full M4 Assault Rifle magazine",
+            "rate": 18.6,
+            "perk": "commando"
+          },
+          {
+            "id": "a-bloody-christmas-carol",
+            "api": "killselectxmaszedsonsinglemap",
+            "icon": "70c580cd2f9472aa5007bb0857275914033eb715",
+            "name": "A Bloody Christmas Carol",
+            "description": "Kill 15 XMas Clots, 5 xmas Stalkers, 5 XMas Crawlers, 1 XMas Siren and 1 XMas Bloat.",
+            "rate": 23.62,
+            "event": true
+          },
+          {
+            "id": "feeling-lucky",
+            "api": "killxmaszedwitheveryrevolvershot",
+            "icon": "cb4fa2e08442bc45967a7cd31885b8d76cfcf3cf",
+            "name": "Feeling Lucky?",
+            "description": "Kill a specimen with every shot from your Revolver for one magazine",
+            "rate": 9.12,
+            "perk": "sharpshooter",
+            "tips": [
+              "Revolver refers to the .44 Magnum."
+            ]
+          },
+          {
+            "id": "i-love-ze-healing-not-ze-hurting",
+            "api": "heal3000pointswithmp5duringxmas",
+            "icon": "89ced378daf98b1b8ea94ccf449764e101fa85c8",
+            "name": "I love ze Healing not ze Hurting",
+            "description": "Heal others for 3000 points of health with the MP5 SMG",
+            "rate": 4.66,
+            "max": 3000,
+            "count": "xmaspointshealedwithmp5",
+            "perk": "medic"
+          },
+          {
+            "id": "we-have-ourselves-a-cowboy",
+            "api": "holdall3dualiesduringxmas",
+            "icon": "accf66a38adfcb6455d3a20819b732d9fbe49d6e",
+            "name": "We Have Ourselves a Cowboy",
+            "description": "Hold dual 9mm, dual hand cannons and Dual Revolvers",
+            "rate": 3.51,
+            "perk": "sharpshooter",
+            "tips": [
+              "Revolver refers to the .44 Magnum.",
+              "If you have difficulty, try buying the single pistol then the second."
+            ]
+          },
+          {
+            "id": "finish-him",
+            "api": "killxmasscrakewithdirectm203nade",
+            "icon": "018e2e46d12755049c5a66e08f52abed17db0be6",
+            "name": "Finish Him",
+            "description": "Hit a Scrake with the M203 Rifle grenade to kill him",
+            "rate": 3.16,
+            "perk": "demolition"
+          },
+          {
+            "id": "italian-meat-pasta",
+            "api": "kill12xmaszedswith1benelliclip",
+            "icon": "464149e224d486c1c9002025e44aeeacd78c2b57",
+            "name": "Italian Meat Pasta",
+            "description": "Kill 12 zeds with a full magazine from the Combat Shotgun",
+            "rate": 2.58,
+            "perk": "support"
+          },
+          {
+            "id": "highlander",
+            "api": "killxmaspatriarchwithclaymoredecap",
+            "icon": "814927ec1746179d0b1ac0b46955b74d8902be49",
+            "name": "Highlander",
+            "description": "Kill a Scrake, a Fleshpound, and the Patriarch with the Claymore Sword within one map",
+            "rate": 2.24,
+            "perk": "berserker"
+          },
+          {
+            "id": "burning-irony",
+            "api": "kill15xmashuskswithhuskcannon",
+            "icon": "d8a5878d1aab09e7a40f103bb9c2f2926517114a",
+            "name": "Burning Irony",
+            "description": "Kill 15 Husks with the Husk Cannon",
+            "rate": 1.63,
+            "max": 15,
+            "count": "xmashuskskilledwithhuskcannon",
+            "perk": "firebug",
+            "tips": [
+              "You must kill the husk with direct damage from an explosion, not residual burning damage."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "christmas-2012",
+        "name": "2012 – Twisted Christmas",
+        "data": [
+          {
+            "id": "but-its-all-red",
+            "api": "butitsallred",
+            "icon": "b981e442cf30f6d4f1baa57c4244e399cfcd1652",
+            "name": "But It's All Red!",
+            "description": "Collect all 16 Z.E.D. Gun pieces",
+            "rate": 3.5,
+            "event": true,
+            "tips": [
+              "The parts are pretty easy to spot since they are aren't hidden like other object hunting achievements.",
+              "Check in particular on top of machines and the floors along the walls.",
+              "<a href=\"https://www.youtube.com/watch?v=3HhH31_FJec\">A video guide to the locations</a> by overlord7777."
+            ]
+          },
+          {
+            "id": "gimli-that-axe",
+            "api": "dwarfaxe",
+            "icon": "6eb9e1dc66038ddabab2da97a8cf9d08cc0d5c12",
+            "name": "Gimli That Axe!",
+            "description": "Get the Not-a-war-hammer Achievement in Dwarfs!?",
+            "rate": 2.34,
+            "tips": [
+              "Either buy Dwarfs!? or play the free version and collect 40,000 gold, which takes about an hour at most."
+            ]
+          },
+          {
+            "id": "game-over-man",
+            "api": "gameoverman",
+            "icon": "0642890335436559009bc4f98c20945126c56134",
+            "name": "Game Over, Man!",
+            "description": "Have 20 Zeds you slowed with the Z.E.D. gun killed",
+            "rate": 2.08,
+            "max": 20,
+            "count": "zedskilledwhilezapped",
+            "perk": "none"
+          },
+          {
+            "id": "have-my-axe",
+            "api": "havemyaxe",
+            "icon": "c7309c4573654f44890f6ecce77a32c056f9b5c6",
+            "name": "Have my axe",
+            "description": "Kill 30 Fleshpounds with the Dwarfs!? axe with back attacks",
+            "rate": 1.07,
+            "max": 30,
+            "count": "fleshpoundskilledwithaxe",
+            "perk": "berserker",
+            "tips": [
+              "It is easiest to reach their back while they are targeting a team mate."
+            ]
+          },
+          {
+            "id": "one-small-step-for-man",
+            "api": "onesmallstepforman",
+            "icon": "be1a8fd7874dc639c488867c0d9478c3ee992110",
+            "name": "One Small Step for Man",
+            "description": "Kill 500 Zeds with the Schneidzekk Medic Gun while you are falling",
+            "rate": 1.06,
+            "max": 500,
+            "count": "zedskilledwhileairborne",
+            "perk": "medic",
+            "tips": [
+              "Basically just jump and shoot while you come back down.",
+              "Easiest on <a href=\"moonbase\">Moonbase</a>."
+            ]
+          }
+        ]
+      },
+      {
+        "id": "christmas-2013",
+        "name": "2013 – Twisted Christmas",
+        "data": [
+          {
+            "id": "no-time-for-love-dr-jones",
+            "api": "playwithorasballhero",
+            "icon": "c31ca01b1538dd736593ada0248d2a21178b5dcd",
+            "name": "No Time for Love, Dr. Jones",
+            "description": "Win a short round on KF-Hell playing as or with Harchier Spebbington",
+            "rate": 0.8,
+            "tips": []
+          }
+        ]
+      },
+      {
+        "id": "christmas-2014",
+        "name": "2014 – Thrill Chill",
+        "data": [
+          {
+            "id": "all-shook-up",
+            "api": "collectsnowglobes",
+            "icon": "aacc2f14eba8f6c476f7c2146e272dcd707e8b13",
+            "name": "All shook up",
+            "description": "Destroy all 15 Snow Globes",
+            "rate": 0.87,
+            "tips": [
+              "<a href=\"https://www.youtube.com/watch?v=FWOv8ZNJYqM\">A video guide to the locations</a> by TMPGames."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,93 @@
+{{~#*inline "head"}}
+  {{> components/asset-css name="reset"}}
+  {{> components/asset-css name="smoothness/jquery-ui-1.11.4.min"}}
+  {{> components/asset-css name="kf"}}
+  {{> components/asset-js name="jquery-2.2.4.min"}}
+  {{> components/asset-js name="jquery-ui-1.11.4.min"}}
+  {{> components/asset-js name="purl"}}
+  {{> components/asset-js name="kf"}}
+{{/inline}}
+{{~#*inline "body"}}
+  <section id="introduction">
+    <h1><a href="#introduction">Introduction</a></h1>
+    <p>
+      Welcome! This guide aims to document every achievement available in the game Killing Floor by Tripwire Interactive.
+    </p>
+    <p>
+      The guide includes details of each achievement as well as strategies to unlock them.
+    </p>
+    <p>
+      Map achievements are now included at the end of the page. They are sorted separately.
+    </p>
+    <section id="symbols">
+      <h2><a href="#symbols">Symbols</a></h2>
+      <p>
+        <img src="/assets/images/kf/perks/medic.png" alt="medic" />
+        <img src="/assets/images/kf/perks/support.png" alt="suppport" />
+        <img src="/assets/images/kf/perks/sharpshooter.png" alt="sharpshooter" />
+        <img src="/assets/images/kf/perks/commando.png" alt="commando" />
+        <img src="/assets/images/kf/perks/berserker.png" alt="berserker" />
+        <img src="/assets/images/kf/perks/firebug.png" alt="firebug" />
+        <img src="/assets/images/kf/perks/demolition.png" alt="demolition" />
+        <img src="/assets/images/kf/perks/none.png" alt="none" />
+        indicate that the achievement involves a weapon belonging to that perk.
+      </p>
+      <p>
+        <span class="tag easy">10</span><span class="tag medium">5</span><span class="tag hard">1</span>
+        indicate the percentage of players on Steam who have unlocked this achievement, with the colour giving an indication of how common it is at a glance.
+        Note that achievements introduced more recently tend to be skewed lower, since there has been less time to unlock them.
+      </p>
+      <p>
+        <span class="tag event">&nbsp;</span>
+        <span style="text-decoration: line-through">
+        indicates that the achievement is only able to be unlocked during the corresponding event.
+        Note that despite being introduced with an event, some achievements can be unlocked at any time; for these, the symbol is not present.</span>
+        Event timing restrictions have been removed, all achievements can be unlocked at any time.
+      </p>
+    </section>
+    <section>
+      <h2><a href="#options">Options</a></h2>
+      <p>Sort by <select id="sort" name="sort">
+        <option value="rate-desc" selected="selected">rate (descending)</option>
+        <option value="rate-asc">rate (ascending)</option>
+        <option value="name">name</option>
+      </select></p>
+      <p>Group by <select id="group" name="group">
+        <option value="none" selected="selected">none</option>
+        <option value="event">event</option>
+        <option value="perk">perk</option>
+      </select></p>
+      <p><label><input type="checkbox" id="tips" name="tips" /> Show tips</label></p>
+      <p><label><input type="checkbox" id="old" name="old" /> Use old icons</label></p>
+      <p>
+        <label for="filter">Filter by Steam user
+          <input type="text" id="filter" name="filter" title="" />
+        </label>
+        <button id="filterApply">Apply</button>
+        <button id="filterClear">Clear</button>
+        <span id="filterStatus"></span>
+      </p>
+      <p>Tired of putting in these settings every time? <a id="bookmark" href="#">Right click here and select bookmark</a>.
+    </section>
+  </section>
+  <div id="achievements">
+  </div>
+  <section id="maps">
+    <h1>Maps</h1>
+    <p>All event maps except Santa's Evil Lair, Aperture, and Abusement Park can be completed on any length. All other maps must be completed on Long only.
+    <table>
+      <thead>
+        <tr>
+          <th><a href="javascript:sort_maps('name');">Name</a></th>
+          <th><a href="javascript:sort_maps('normal');">Normal</a></th>
+          <th><a href="javascript:sort_maps('hard');">Hard</a></th>
+          <th><a href="javascript:sort_maps('suicidal');">Suicidal</a></th>
+          <th><a href="javascript:sort_maps('hell');">Hell on Earth</a></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </section>
+{{/inline}}
+{{~> layouts/default title="Killing Floor Achievement Guide"}}
