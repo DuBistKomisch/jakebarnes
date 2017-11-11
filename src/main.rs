@@ -35,6 +35,11 @@ fn kf2() -> Template {
     Template::render("kf2", {})
 }
 
+#[get("/pd2")]
+fn pd2() -> Template {
+    Template::render("pd2", {})
+}
+
 // if nothing else matches, try loading a public file
 #[get("/<file..>", rank = 1)]
 fn public(file: PathBuf) -> Option<NamedFile> {
@@ -47,6 +52,7 @@ fn main() {
              home,
              kf,
              kf2,
+             pd2,
              public
         ])
         .attach(Template::fairing())

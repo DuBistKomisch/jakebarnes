@@ -1,0 +1,76 @@
+{{~#*inline "head"}}
+  {{> components/asset-css name="reset"}}
+  {{> components/asset-css name="smoothness/jquery-ui-1.11.4.min"}}
+  {{> components/asset-css name="pd2"}}
+  {{> components/asset-js name="jquery-2.2.4.min"}}
+  {{> components/asset-js name="jquery-ui-1.11.4.min"}}
+  {{> components/asset-js name="purl"}}
+  {{> components/asset-js name="pd2"}}
+{{/inline}}
+{{~#*inline "body"}}
+  <section id="introduction">
+    <h1><a href="#introduction">Introduction</a></h1>
+    <p>
+      Welcome! This guide aims to document every achievement available in the game Payday 2 by Overkill Software.
+    </p>
+    <p>
+      The guide includes details of each achievement as well as strategies to unlock them.
+    </p>
+    <section id="contact">
+      <h2><a href="#contact">Contact</a></h2>
+      <p>
+        This guide is a work in progress, so feel free to let me know any mistakes I've made.
+      </p>
+    </section>
+    <section id="symbols">
+      <h2><a href="#symbols">Symbols</a></h2>
+      <p>
+        <span class="tag easy">10</span>
+        <span class="tag medium">5</span>
+        <span class="tag hard">1</span>
+        indicate the percentage of players on Steam who have unlocked this achievement, with the colour giving an indication of how common it is at a glance.
+        Note that achievements introduced more recently tend to be skewed lower, since there has been less time to unlock them.
+      </p>
+      <p>
+        <span class="tag difficulty h">&nbsp;</span>
+        <span class="tag difficulty vh">&nbsp;</span>
+        <span class="tag difficulty ok">&nbsp;</span>
+        <span class="tag difficulty dw">&nbsp;</span>
+        indicate that the achievement requires playing on the given difficulty or above.
+      </p>
+      <p>
+        <span class="tag lock event">&nbsp;</span>
+        <span class="tag lock community">&nbsp;</span>
+        <span class="tag lock dlc">&nbsp;</span>
+        indicate that the achievement has certain restrictions before being unlockable. Respectively, they are playing during an event, joining the community group, and purchasing a DLC.
+      </p>
+      <p>
+        <span class="tag lock unlock">&nbsp;</span>
+        indicates that the achievement also unlocks one or more items.
+      </p>
+    </section>
+    <section>
+      <h2><a href="#options">Options</a></h2>
+      <p>Sort by <select id="sort" name="sort">
+        <option value="rate-desc" selected="selected">rate (descending)</option>
+        <option value="rate-asc">rate (ascending)</option>
+        <option value="name">name</option>
+        <option value="none">none</option>
+      </select></p>
+      <p><label><input type="checkbox" id="events" name="events" /> Group by event</label></p>
+      <p><label><input type="checkbox" id="tips" name="tips" /> Show tips</label></p>
+      <p>
+        <label for="filter">Filter by Steam user
+          <input type="text" id="filter" name="filter" title="" />
+        </label>
+        <button id="filterApply">Apply</button>
+        <button id="filterClear">Clear</button>
+        <span id="filterStatus"></span>
+      </p>
+      <p>Tired of putting in these settings every time? <a id="bookmark" href="#">Right click here and select bookmark</a>.
+    </section>
+  </section>
+  <div id="achievements">
+  </div>
+{{/inline}}
+{{~> layouts/default title="Payday 2 Achievement Guide"}}
