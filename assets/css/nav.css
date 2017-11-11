@@ -1,22 +1,3 @@
-html, body {
-  background: #eee;
-  color: #222;
-}
-
-a {
-  color: rgb(65, 131, 196);
-}
-
-.permalink > a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-.permalink:hover > a:after {
-  padding-left: 8px;
-  content: '\1f517\fe0f';
-}
-
 /**
  * Navigation Menu
  */

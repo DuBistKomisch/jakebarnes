@@ -20,7 +20,7 @@ struct HomeContext {
     age: i64
 }
 #[get("/")]
-fn index() -> Template {
+fn home() -> Template {
     let age = Local::today().signed_duration_since(Local.ymd(1992, 8, 19)).num_seconds() / 31557600;
     Template::render("home", HomeContext { age })
 }
@@ -46,7 +46,7 @@ fn public(file: PathBuf) -> Option<NamedFile> {
 fn main() {
     rocket::ignite()
         .mount("/", routes![
-             index,
+             home,
              assets,
              templates,
              public

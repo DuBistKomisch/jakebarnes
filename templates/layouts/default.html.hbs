@@ -6,8 +6,8 @@
   <meta name="description" content="">
   <meta name="author" content="Jake Barnes">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/assets/css/default.css">
-  {{~> head ~}}
+  {{> components/asset-css name="nav"}}
+  {{> head}}
 </head>
 <body>
   <ul class="nav">
@@ -15,6 +15,6 @@
     <li><a href="/">Home</a></li>
     <li><a href="/#contact">Contact</a></li>
   </ul>
-  {{~> body ~}}
+  {{> body}}
 </body>
 </html>
