@@ -25,6 +25,15 @@ fn home() -> Template {
     Template::render("home", HomeContext { age })
 }
 
+#[get("/ds2sm")]
+fn ds2sm() -> Template {
+    Template::render("ds2sm", {})
+}
+#[get("/ds2sm/embed.html")]
+fn ds2sm_embed() -> Template {
+    Template::render("ds2sm_embed", {})
+}
+
 #[get("/kf")]
 fn kf() -> Template {
     Template::render("kf", {})
@@ -50,6 +59,8 @@ fn main() {
     rocket::ignite()
         .mount("/", routes![
              home,
+             ds2sm,
+             ds2sm_embed,
              kf,
              kf2,
              pd2,

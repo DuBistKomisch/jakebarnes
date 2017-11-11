@@ -1,0 +1,26 @@
+{{~#*inline "head"}}
+  {{> components/asset-css name="reset"}}
+  {{> components/asset-css name="ds2sm-embed"}}
+  {{> components/asset-js name="jquery-2.2.4.min"}}
+  {{> components/asset-js name="ds2sm.min"}}
+{{/inline}}
+{{~#*inline "body"}}
+  <div id="container">
+    <input id="my-sm" type="text" value="0"/>
+    <div id="lang">
+      <span id="lang-selected"></span>
+      <ul id="lang-menu">
+      </ul>
+    </div>
+    <span id="item-name">&nbsp;</span>
+    <span id="item-ner">&nbsp;</span>
+    <span id="item-desc">&nbsp;</span>
+    <span id="foot-credit">&nbsp;</span>
+    <span id="foot-links">&nbsp;</span>
+    <span id="foot-updated">&nbsp;</span>
+    <span id="sm-blue">&nbsp;</span>
+    <span id="sm-green">&nbsp;</span>
+  </div>
+  <canvas id="chart" width="830" height="675"></canvas>
+{{/inline}}
+{{~> layouts/embed title="Dark Souls 2 Soul Memory Calculator / Visualiser"}}
