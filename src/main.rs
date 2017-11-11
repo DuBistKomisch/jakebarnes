@@ -31,14 +31,8 @@ fn assets(file: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new("assets/").join(file)).ok()
 }
 
-// try loading a templated page
-#[get("/<page>", rank = 1)]
-fn templates(page: String) -> Template {
-    Template::render(page, {})
-}
-
 // if nothing else matches, try loading a public file
-#[get("/<file..>", rank = 2)]
+#[get("/<file..>", rank = 1)]
 fn public(file: PathBuf) -> Option<NamedFile> {
     NamedFile::open(Path::new("public/").join(file)).ok()
 }
@@ -48,7 +42,6 @@ fn main() {
         .mount("/", routes![
              home,
              assets,
-             templates,
              public
         ])
         .attach(Template::fairing())
