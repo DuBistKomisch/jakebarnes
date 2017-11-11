@@ -1,0 +1,341 @@
+/**
+ * layout
+ */
+
+html
+{
+  padding: 0px 10px;
+}
+
+body
+{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+}
+
+section
+{
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+article
+{
+  margin-right: 10px;
+  margin-top: 10px;
+
+  background: #333;
+  border-radius: 5px;
+}
+
+section > p,
+article > p
+{
+  margin-top: 10px;
+}
+
+h1,
+h2
+{
+  margin-left: -10px;
+  margin-top: 10px;
+}
+
+/**
+ * decoration
+ */
+
+html
+{
+  font-family: sans-serif;
+  font-size: 12pt;
+  color: #fff;
+  background-color: #444;
+}
+
+h1,
+h2
+{
+  font-weight: bold;
+}
+
+h1
+{
+  font-size: 150%;
+}
+
+h2
+{
+  font-style: italic;
+  font-size: 125%;
+}
+
+a
+{
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover
+{
+  border-bottom: #888 2px ridge;
+}
+
+/**
+ * options area
+ */
+
+.ui-widget
+{
+  font-family: sans-serif;
+  font-size: 12pt;
+}
+
+body .ui-tooltip
+{
+  max-width: none;
+  background: #888;
+  color: #fff;
+  border: #bbb 1px solid;
+  border-radius: 5px;
+}
+
+.ui-selectmenu-button
+{
+  vertical-align: middle;
+}
+
+.ui-selectmenu-button span.ui-selectmenu-text,
+.ui-button-text-only .ui-button-text
+{
+  padding: 0px 8px;
+  line-height: 1.4;
+}
+
+label[for="filter"],
+#filterStatus
+{
+  vertical-align: middle;
+}
+
+/**
+ * status messages
+ */
+
+.working { color: #ff8; }
+.success { color: #8f8; }
+.error { color: #f88; }
+
+/**
+ * tips area
+ */
+
+article.tips
+{
+  padding-bottom: 10px;
+}
+
+article > p
+{
+  margin-left: 10px;
+}
+
+article > p a
+{
+  font-style: italic;
+}
+
+/**
+ * details area
+ */
+
+article div:nth-of-type(1)
+{
+  position: relative;
+  height: 64px;
+  padding: 5px;
+
+  background-repeat: no-repeat;
+  background-position: 79px 5px;
+  background-color: #888;
+  border: #bbb 1px solid;
+  border-radius: 5px;
+}
+
+article div:nth-of-type(1) img
+{
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+
+/**
+ * title area
+ */
+
+article div:nth-of-type(1) h3
+{
+  position: absolute;
+  top: 15px;
+  left: 79px;
+
+  font-weight: bold;
+  font-size: 110%;
+}
+
+article div:nth-of-type(1)[class] h3
+{
+  left: 104px;
+}
+
+/**
+ * description area
+ */
+
+article div:nth-of-type(1) p:nth-of-type(1)
+{
+  position: absolute;
+  top: 48px;
+  left: 79px;
+
+  font-style: italic;
+  font-size: 75%;
+}
+
+/**
+ * tags
+ */
+
+article div:nth-of-type(1) p:nth-of-type(2) 
+{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.tag
+{
+  display: inline-block;
+  margin-left: 5px;
+  padding: 2px;
+
+  font-family: monospace;
+  font-size: 80%;
+  font-weight: bold;
+  color: #000;
+  border-width: 1px;
+  border-style: outset;
+  border-radius: 4px;
+}
+
+.event
+{
+  background-image: url(/images/kf2/clock.png);
+  background-repeat: no-repeat;
+  background-position: 2px 2px;
+  width: 12px;
+  height: 12px;
+}
+
+.tag:after { content: "%"; }
+.event:after { content: none; }
+.link:after { content: none; }
+ 
+.easy { border-color: #4d4; background-color: #4d4; }
+.medium { border-color: #fd0; background-color: #fd0; }
+.hard { border-color: #f40; background-color: #f40; }
+.event { border-color: #88f; background-color: #88f; }
+.link { border-color: #ddd; background-color: #ddd; }
+
+/**
+ * progress
+ */
+
+article div:nth-of-type(1) p:nth-of-type(3)
+{
+  position: absolute;
+  right: 5px;
+  top: 48px;
+
+  width: 102px;
+  height: 20px;
+  background: #333;
+  border-radius: 5px;
+  border: 1px inset #888;
+}
+
+article div:nth-of-type(1) p:nth-of-type(3) span:nth-of-type(1)
+{
+  display: inline-block;
+
+  height: 18px;
+  background: #383;
+  border-radius: 5px;
+  border: 1px outset #383;
+}
+
+article div:nth-of-type(1) p:nth-of-type(3) span:nth-of-type(2)
+{
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 80%;
+}
+
+article div:nth-of-type(1) p:nth-of-type(3) span:nth-of-type(3)
+{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 80%;
+}
+
+/**
+ * perks
+ */
+
+.medic { background-image: url(/images/kf2/perks/medic.png); }
+.support { background-image: url(/images/kf2/perks/support.png); }
+.sharpshooter { background-image: url(/images/kf2/perks/sharpshooter.png); }
+.commando { background-image: url(/images/kf2/perks/commando.png); }
+.berserker { background-image: url(/images/kf2/perks/berserker.png); }
+.firebug { background-image: url(/images/kf2/perks/firebug.png); }
+.demolition { background-image: url(/images/kf2/perks/demolition.png); }
+.none { background-image: url(/images/kf2/perks/none.png); }
+
+/**
+ * maps area
+ */
+
+#tables table
+{
+  margin: 10px 0px;
+  border-collapse: separate;
+  border-spacing: 5px;
+
+  background-color: #888;
+  border: #bbb 1px solid;
+  border-radius: 5px;
+}
+
+#tables th
+{
+  width: 15%;
+
+  font-weight: bold;
+}
+
+#tables td
+{
+  width: 15%;
+  padding: 5px;
+
+  text-align: center;
+}
+
+#tables td.first
+{
+  text-align: left;
+}

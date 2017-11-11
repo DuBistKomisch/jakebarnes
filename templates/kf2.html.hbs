@@ -1,0 +1,70 @@
+{{~#*inline "head"}}
+  {{> components/asset-css name="reset"}}
+  {{> components/asset-css name="smoothness/jquery-ui-1.11.4.min"}}
+  {{> components/asset-css name="kf2"}}
+  {{> components/asset-js name="jquery-2.2.4.min"}}
+  {{> components/asset-js name="jquery-ui-1.11.4.min"}}
+  {{> components/asset-js name="purl"}}
+  {{> components/asset-js name="kf2"}}
+{{/inline}}
+{{~#*inline "body"}}
+  <section id="introduction">
+    <h1><a href="#introduction">Introduction</a></h1>
+    <p>
+      Welcome! This guide aims to document every achievement available in the game Killing Floor 2 by Tripwire Interactive.
+    </p>
+    <p>
+      The guide includes details of each achievement as well as strategies to unlock them.
+    </p>
+    <p>
+      Map achievements are now included at the end of the page. They are sorted separately.
+    </p>
+    <section id="symbols">
+      <h2><a href="#symbols">Symbols</a></h2>
+      <p>
+        <img src="/images/kf2/perks/medic.png" alt="medic" />
+        <img src="/images/kf2/perks/support.png" alt="suppport" />
+        <img src="/images/kf2/perks/sharpshooter.png" alt="sharpshooter" />
+        <img src="/images/kf2/perks/commando.png" alt="commando" />
+        <img src="/images/kf2/perks/berserker.png" alt="berserker" />
+        <img src="/images/kf2/perks/firebug.png" alt="firebug" />
+        <img src="/images/kf2/perks/demolition.png" alt="demolition" />
+        <img src="/images/kf2/perks/none.png" alt="none" />
+        indicate that the achievement involves a weapon belonging to that perk.
+      </p>
+      <p>
+        <span class="tag easy">10</span><span class="tag medium">5</span><span class="tag hard">1</span>
+        indicate the percentage of players on Steam who have unlocked this achievement, with the colour giving an indication of how common it is at a glance.
+        Note that achievements introduced more recently tend to be skewed lower, since there has been less time to unlock them.
+      </p>
+    </section>
+    <section>
+      <h2><a href="#options">Options</a></h2>
+      <p>Sort by <select id="sort" name="sort">
+        <option value="rate-desc" selected="selected">rate (descending)</option>
+        <option value="rate-asc">rate (ascending)</option>
+        <option value="name">name</option>
+      </select></p>
+      <p>Group by <select id="group" name="group">
+        <option value="none" selected="selected">none</option>
+        <option value="event">event</option>
+        <option value="perk">perk</option>
+      </select></p>
+      <p><label><input type="checkbox" id="tips" name="tips" /> Show tips</label></p>
+      <p>
+        <label for="filter">Filter by Steam user
+          <input type="text" id="filter" name="filter" title="" />
+        </label>
+        <button id="filterApply">Apply</button>
+        <button id="filterClear">Clear</button>
+        <span id="filterStatus"></span>
+      </p>
+      <p>Tired of putting in these settings every time? <a id="bookmark" href="#">Right click here and select bookmark</a>.
+    </section>
+  </section>
+  <div id="achievements">
+  </div>
+  <div id="tables">
+  </div>
+{{/inline}}
+{{~> layouts/default title="Killing Floor 2 Achievement Guide"}}

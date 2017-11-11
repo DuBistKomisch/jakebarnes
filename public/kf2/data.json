@@ -1,0 +1,134 @@
+[
+  {
+    "id": "general",
+    "name": "General",
+    "data": [
+      {
+        "id": "schools-out-forever",
+        "api": "achievement_109",
+        "icon": "66f5309ba8030f4f5dc5f1c15e1db4dad14ffbb1",
+        "name": "School's Out Forever",
+        "description": "Complete the Training Floor",
+        "link": "",
+        "rate": 14.78
+      },
+      {
+        "id": "dead-silence",
+        "api": "achievement_129",
+        "icon": "08e4690859d94699a73a80e5589fb0b8c799fa1c",
+        "name": "Dead Silence",
+        "description": "Kill a Siren Before She Screams",
+        "link": "",
+        "rate": 32.14
+      },
+      {
+        "id": "quick-on-the-trigger",
+        "api": "achievement_130",
+        "icon": "6fdfdd1f09fb91e90a1b25cb83a5421ae81a2cb5",
+        "name": "Quick on the Trigger",
+        "description": "Kill the Patriarch Before He Has a Chance to Heal",
+        "link": "",
+        "rate": 7.23
+      },
+      {
+        "id": "its-only-a-flesh-wound",
+        "api": "achievement_131",
+        "icon": "03ff0be17f0e56d8e312aa117844f27f134c47af",
+        "name": "It's Only a Flesh Wound",
+        "description": "Kill Your First Fleshpound",
+        "link": "",
+        "rate": 34.89
+      },
+      {
+        "id": "hack-and-slash",
+        "api": "achievement_132",
+        "icon": "6cfc51c010c7198347da1a22e1ce51d47f5ff13c",
+        "name": "Hack and Slash",
+        "description": "Kill Your First Scrake",
+        "link": "",
+        "rate": 35.97
+      },
+      {
+        "id": "die-volter",
+        "api": "achievement_133",
+        "icon": "6f07eab287060d5516082afa7e3a7772017fe75c",
+        "name": "Die Volter",
+        "description": "Kill Dr. Hans Volter For the First Time",
+        "link": "",
+        "rate": 20.29
+      },
+      {
+        "id": "win-1",
+        "api": "achievement_142",
+        "icon": "93aee896270cac79fb5ae36375c92091b57e9707",
+        "name": "Win 1",
+        "description": "Win 1 Multiplayer Match",
+        "link": "",
+        "rate": 33.77
+      },
+      {
+        "id": "win-10",
+        "api": "achievement_143",
+        "icon": "5ac2c4dcfc8e708bce22d43c8fa0a28bc5f63177",
+        "name": "Win 10",
+        "description": "Win 10 Multiplayer Matches",
+        "link": "",
+        "rate": 14.47
+      },
+      {
+        "id": "win-25",
+        "api": "achievement_144",
+        "icon": "361fe6cb30916a4b3785ea0431b7df56bca3e111",
+        "name": "Win 25",
+        "description": "Win 25 Multiplayer Matches",
+        "link": "",
+        "rate": 6.99
+      },
+      {
+        "id": "vs-zed-win",
+        "api": "achievement_145",
+        "icon": "992d3a5c5c8d736cd26ef8ce2f371eeea33a8469",
+        "name": "VS Zed Win",
+        "description": "Win a VS Survival Round Playing as the Zeds",
+        "link": "",
+        "rate": 5.66
+      },
+      {
+        "id": "vs-human-win",
+        "api": "achievement_146",
+        "icon": "af8cdf129ec3eaa218ca706105ed329792893872",
+        "name": "VS Human Win",
+        "description": "Win a VS Survival Round Playing as the Humans",
+        "link": "",
+        "rate": 1.4
+      },
+      {
+        "id": "hold-out",
+        "api": "achievement_147",
+        "icon": "d5b03919fefaa82dc87765dc29961e4fd3816acb",
+        "name": "Hold Out",
+        "description": "Weld a Door to 100%",
+        "link": "",
+        "rate": 27.87
+      },
+      {
+        "id": "i-got-your-back",
+        "api": "achievement_148",
+        "icon": "a873278bb202e325e5073ae542ebabf0dd276236",
+        "name": "I Got Your Back",
+        "description": "Heal a Teammate With the Syringe",
+        "link": "",
+        "rate": 27.27
+      },
+      {
+        "id": "benefactor",
+        "api": "achievement_149",
+        "icon": "7b07b668e976c865c0a2ad8707149d43f9652ef6",
+        "name": "Benefactor",
+        "description": "Give 1000 Dosh to Another Player During a Multiplayer Match",
+        "link": "",
+        "rate": 22.54
+      }
+    ]
+  }
+]

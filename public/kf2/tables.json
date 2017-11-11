@@ -1,0 +1,988 @@
+[
+  {
+    "id": "maps",
+    "name": "Maps",
+    "columns": [
+      "Name",
+      "Normal",
+      "Hard",
+      "Suicidal",
+      "Hell on Earth",
+      "Collectibles"
+    ],
+    "data": [
+      {
+        "id": "any-maps",
+        "api": [
+          "",
+          "achievement_134",
+          "achievement_135",
+          "achievement_136",
+          ""
+        ],
+        "name": "Any",
+        "rate": [
+          0,
+          19.59,
+          7.96,
+          6.5,
+          0
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "burning-paris",
+        "api": [
+          "achievement_0",
+          "achievement_1",
+          "achievement_2",
+          "achievement_3",
+          "achievement_16"
+        ],
+        "name": "Burning Paris",
+        "rate": [
+          30.6,
+          12.64,
+          4.18,
+          1.68,
+          14.28
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=kksWlldnLXQ"
+        ]
+      },
+      {
+        "id": "outpost",
+        "api": [
+          "achievement_4",
+          "achievement_5",
+          "achievement_6",
+          "achievement_7",
+          "achievement_17"
+        ],
+        "name": "Outpost",
+        "rate": [
+          29.35,
+          13.12,
+          4.56,
+          1.78,
+          10.65
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=n29cxTdv-wI"
+        ]
+      },
+      {
+        "id": "biotics-lab",
+        "api": [
+          "achievement_8",
+          "achievement_9",
+          "achievement_10",
+          "achievement_11",
+          "achievement_18"
+        ],
+        "name": "Biotics Lab",
+        "rate": [
+          27.62,
+          10.27,
+          3.12,
+          1.39,
+          5.72
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=tapanlB-Xog"
+        ]
+      },
+      {
+        "id": "volter-manor",
+        "api": [
+          "achievement_12",
+          "achievement_13",
+          "achievement_14",
+          "achievement_15",
+          "achievement_19"
+        ],
+        "name": "Volter Manor",
+        "rate": [
+          18.33,
+          7.5,
+          2.37,
+          1.2,
+          11.5
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=1EaZzxQBoz4"
+        ]
+      },
+      {
+        "id": "evacuation-point",
+        "api": [
+          "achievement_20",
+          "achievement_21",
+          "achievement_22",
+          "achievement_23",
+          "achievement_28"
+        ],
+        "name": "Evacuation Point",
+        "rate": [
+          20.19,
+          8.84,
+          2.85,
+          1.24,
+          5.96
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=4ilFJWBUeQA"
+        ]
+      },
+      {
+        "id": "catacombs",
+        "api": [
+          "achievement_24",
+          "achievement_25",
+          "achievement_26",
+          "achievement_27",
+          "achievement_29"
+        ],
+        "name": "Catacombs",
+        "rate": [
+          16.27,
+          6.21,
+          2.01,
+          1.1,
+          9.27
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=rx5FhAwbBwc"
+        ]
+      },
+      {
+        "id": "black-forest",
+        "api": [
+          "achievement_94",
+          "achievement_95",
+          "achievement_96",
+          "achievement_97",
+          "achievement_98"
+        ],
+        "name": "Black Forest",
+        "rate": [
+          16.41,
+          6.82,
+          2.01,
+          0.96,
+          17.84
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=JUl7tECPN-c"
+        ]
+      },
+      {
+        "id": "farmhouse",
+        "api": [
+          "achievement_99",
+          "achievement_100",
+          "achievement_101",
+          "achievement_102",
+          "achievement_103"
+        ],
+        "name": "Farmhouse",
+        "rate": [
+          17.79,
+          8.45,
+          2.53,
+          1.09,
+          15.01
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=0kq4hK9MwpU"
+        ]
+      },
+      {
+        "id": "prison",
+        "api": [
+          "achievement_104",
+          "achievement_105",
+          "achievement_106",
+          "achievement_107",
+          "achievement_108"
+        ],
+        "name": "Prison",
+        "rate": [
+          13.15,
+          7.71,
+          2.5,
+          1.02,
+          4.71
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=38cqokOcLNw"
+        ]
+      },
+      {
+        "id": "containment-station",
+        "api": [
+          "achievement_119",
+          "achievement_120",
+          "achievement_121",
+          "achievement_122",
+          "achievement_123"
+        ],
+        "name": "Containment Station",
+        "rate": [
+          8.9,
+          5.75,
+          2.27,
+          0.98,
+          7.9
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=gfjwJVisgTY"
+        ]
+      },
+      {
+        "id": "hostile-grounds",
+        "api": [
+          "achievement_124",
+          "achievement_125",
+          "achievement_126",
+          "achievement_127",
+          "achievement_128"
+        ],
+        "name": "Hostile Grounds",
+        "rate": [
+          9.18,
+          5.67,
+          1.92,
+          0.85,
+          5.82
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=HtKiLq4FPOY"
+        ]
+      },
+      {
+        "id": "infernal-realms",
+        "api": [
+          "achievement_150",
+          "achievement_151",
+          "achievement_152",
+          "achievement_153",
+          "achievement_154"
+        ],
+        "name": "Infernal Realms",
+        "rate": [
+          9.97,
+          5.95,
+          1.82,
+          0.81,
+          5.7
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=C-wbSAbjk_Y"
+        ]
+      },
+      {
+        "id": "zed-landing",
+        "api": [
+          "achievement_173",
+          "achievement_174",
+          "achievement_175",
+          "achievement_176",
+          "achievement_177"
+        ],
+        "name": "Zed Landing",
+        "rate": [
+          10.87,
+          7.28,
+          2.45,
+          0.91,
+          13.13
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=Cj1Pny5beKM"
+        ]
+      },
+      {
+        "id": "the-descent",
+        "api": [
+          "achievement_178",
+          "achievement_179",
+          "achievement_180",
+          "achievement_181",
+          "achievement_182"
+        ],
+        "name": "The Descent",
+        "rate": [
+          6.07,
+          4.74,
+          1.44,
+          0.66,
+          8.38
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=mKbW5DKiVJw"
+        ]
+      },
+      {
+        "id": "nuked",
+        "api": [
+          "achievement_183",
+          "achievement_184",
+          "achievement_185",
+          "achievement_186",
+          "achievement_187"
+        ],
+        "name": "Nuked",
+        "rate": [
+          6.72,
+          5.11,
+          1.99,
+          0.89,
+          5.28
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=rCcP_i7uhLE"
+        ]
+      },
+      {
+        "id": "the-tragic-kingdom",
+        "api": [
+          "achievement_188",
+          "achievement_189",
+          "achievement_190",
+          "achievement_191",
+          "achievement_192"
+        ],
+        "name": "The Tragic Kingdom",
+        "rate": [
+          6.39,
+          4.98,
+          1.12,
+          0.58,
+          3.9
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          "https://www.youtube.com/watch?v=GCUkFm_XEXM"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "perk-levels",
+    "name": "Perk Levels",
+    "columns": [
+      "Name",
+      "5",
+      "10",
+      "15",
+      "20",
+      "25"
+    ],
+    "data": [
+      {
+        "id": "any-levels",
+        "api": [
+          "achievement_137",
+          "achievement_138",
+          "achievement_139",
+          "achievement_140",
+          "achievement_141"
+        ],
+        "name": "Any",
+        "rate": [
+          30.7,
+          22.5,
+          14.97,
+          9.03,
+          4.89
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "berserker-levels",
+        "api": [
+          "achievement_30",
+          "achievement_31",
+          "achievement_32",
+          "achievement_33",
+          "achievement_34"
+        ],
+        "name": "Berserker",
+        "rate": [
+          12.18,
+          8.18,
+          5.47,
+          3.73,
+          2.48
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "medic-levels",
+        "api": [
+          "achievement_35",
+          "achievement_36",
+          "achievement_37",
+          "achievement_38",
+          "achievement_39"
+        ],
+        "name": "Medic",
+        "rate": [
+          13.15,
+          9.13,
+          6.17,
+          4.09,
+          2.63
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "commando-levels",
+        "api": [
+          "achievement_40",
+          "achievement_41",
+          "achievement_42",
+          "achievement_43",
+          "achievement_44"
+        ],
+        "name": "Commando",
+        "rate": [
+          17.22,
+          10.94,
+          6.86,
+          4.45,
+          2.84
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "support-levels",
+        "api": [
+          "achievement_45",
+          "achievement_46",
+          "achievement_47",
+          "achievement_48",
+          "achievement_49"
+        ],
+        "name": "Support",
+        "rate": [
+          16.07,
+          10.71,
+          7.28,
+          4.75,
+          2.85
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "firebug-levels",
+        "api": [
+          "achievement_50",
+          "achievement_51",
+          "achievement_52",
+          "achievement_53",
+          "achievement_54"
+        ],
+        "name": "Firebug",
+        "rate": [
+          11.17,
+          7.39,
+          4.97,
+          3.35,
+          2.19
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "demolitions-levels",
+        "api": [
+          "achievement_55",
+          "achievement_56",
+          "achievement_57",
+          "achievement_58",
+          "achievement_59"
+        ],
+        "name": "Demolitions",
+        "rate": [
+          12.93,
+          8.85,
+          5.92,
+          3.82,
+          2.42
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "gunslinger-levels",
+        "api": [
+          "achievement_60",
+          "achievement_61",
+          "achievement_62",
+          "achievement_63",
+          "achievement_64"
+        ],
+        "name": "Gunslinger",
+        "rate": [
+          13.11,
+          7.73,
+          4.93,
+          3.21,
+          2.02
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "sharpshooter-levels",
+        "api": [
+          "achievement_110",
+          "achievement_111",
+          "achievement_112",
+          "achievement_113",
+          "achievement_114"
+        ],
+        "name": "Sharpshooter",
+        "rate": [
+          10.55,
+          6.24,
+          3.64,
+          2.28,
+          1.41
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "swat-levels",
+        "api": [
+          "achievement_155",
+          "achievement_156",
+          "achievement_157",
+          "achievement_158",
+          "achievement_159"
+        ],
+        "name": "SWAT",
+        "rate": [
+          10.49,
+          6.74,
+          4.18,
+          2.54,
+          1.51
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "survivalist-levels",
+        "api": [
+          "achievement_164",
+          "achievement_165",
+          "achievement_166",
+          "achievement_167",
+          "achievement_168"
+        ],
+        "name": "Survivalist",
+        "rate": [
+          6.05,
+          3.95,
+          2.54,
+          1.68,
+          1.02
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "all-levels",
+        "api": [
+          "",
+          "",
+          "",
+          "",
+          "achievement_93"
+        ],
+        "name": "All",
+        "rate": [
+          0,
+          0,
+          0,
+          0,
+          0.81
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      }
+    ]
+  },
+  {
+    "id": "perk-difficulties",
+    "name": "Perk Difficulties",
+    "columns": [
+      "Name",
+      "Normal",
+      "Hard",
+      "Suicidal",
+      "Hell on Earth"
+    ],
+    "data": [
+      {
+        "id": "berserker-difficulties",
+        "api": [
+          "achievement_65",
+          "achievement_66",
+          "achievement_67",
+          "achievement_68"
+        ],
+        "name": "Berserker",
+        "rate": [
+          13.83,
+          6.94,
+          2.98,
+          2.91
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "medic-difficulties",
+        "api": [
+          "achievement_69",
+          "achievement_70",
+          "achievement_71",
+          "achievement_72"
+        ],
+        "name": "Medic",
+        "rate": [
+          10.84,
+          7.34,
+          3.21,
+          3.02
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "commando-difficulties",
+        "api": [
+          "achievement_73",
+          "achievement_74",
+          "achievement_75",
+          "achievement_76"
+        ],
+        "name": "Commando",
+        "rate": [
+          17.21,
+          8.35,
+          3.06,
+          2.88
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "support-difficulties",
+        "api": [
+          "achievement_77",
+          "achievement_78",
+          "achievement_79",
+          "achievement_80"
+        ],
+        "name": "Support",
+        "rate": [
+          14.15,
+          8.66,
+          3.49,
+          3.07
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "firebug-difficulties",
+        "api": [
+          "achievement_81",
+          "achievement_82",
+          "achievement_83",
+          "achievement_84"
+        ],
+        "name": "Firebug",
+        "rate": [
+          10.56,
+          5.67,
+          2.36,
+          3.07
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "demolitions-difficulties",
+        "api": [
+          "achievement_85",
+          "achievement_86",
+          "achievement_87",
+          "achievement_88"
+        ],
+        "name": "Demolitions",
+        "rate": [
+          11.4,
+          7.41,
+          3.3,
+          3.68
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "gunslinger-difficulties",
+        "api": [
+          "achievement_89",
+          "achievement_90",
+          "achievement_91",
+          "achievement_92"
+        ],
+        "name": "Gunslinger",
+        "rate": [
+          15.45,
+          7.16,
+          2.69,
+          2.83
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "sharpshooter-difficulties",
+        "api": [
+          "achievement_115",
+          "achievement_116",
+          "achievement_117",
+          "achievement_118"
+        ],
+        "name": "Sharpshooter",
+        "rate": [
+          12.15,
+          6.45,
+          2.34,
+          2.49
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "swat-difficulties",
+        "api": [
+          "achievement_160",
+          "achievement_161",
+          "achievement_162",
+          "achievement_163"
+        ],
+        "name": "SWAT",
+        "rate": [
+          10.63,
+          6.43,
+          2.32,
+          2.33
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": "survivalist-difficulties",
+        "api": [
+          "achievement_169",
+          "achievement_170",
+          "achievement_171",
+          "achievement_172"
+        ],
+        "name": "Survivalist",
+        "rate": [
+          5.77,
+          3.35,
+          1.42,
+          1.58
+        ],
+        "link": [
+          "",
+          "",
+          "",
+          ""
+        ]
+      }
+    ]
+  }
+]

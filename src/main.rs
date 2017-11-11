@@ -30,6 +30,11 @@ fn kf() -> Template {
     Template::render("kf", {})
 }
 
+#[get("/kf2")]
+fn kf2() -> Template {
+    Template::render("kf2", {})
+}
+
 // if nothing else matches, try loading a public file
 #[get("/<file..>", rank = 1)]
 fn public(file: PathBuf) -> Option<NamedFile> {
@@ -41,6 +46,7 @@ fn main() {
         .mount("/", routes![
              home,
              kf,
+             kf2,
              public
         ])
         .attach(Template::fairing())
