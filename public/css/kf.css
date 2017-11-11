@@ -232,7 +232,7 @@ article div:nth-of-type(1) p:nth-of-type(2)
 
 .event
 {
-  background-image: url(/assets/images/kf/clock.png);
+  background-image: url(/images/kf/clock.png);
   background-repeat: no-repeat;
   background-position: 2px 2px;
   width: 12px;
@@ -294,14 +294,14 @@ article div:nth-of-type(1) p:nth-of-type(3) span:nth-of-type(3)
  * perks
  */
 
-.medic { background-image: url(/assets/images/kf/perks/medic.png); }
-.support { background-image: url(/assets/images/kf/perks/support.png); }
-.sharpshooter { background-image: url(/assets/images/kf/perks/sharpshooter.png); }
-.commando { background-image: url(/assets/images/kf/perks/commando.png); }
-.berserker { background-image: url(/assets/images/kf/perks/berserker.png); }
-.firebug { background-image: url(/assets/images/kf/perks/firebug.png); }
-.demolition { background-image: url(/assets/images/kf/perks/demolition.png); }
-.none { background-image: url(/assets/images/kf/perks/none.png); }
+.medic { background-image: url(/images/kf/perks/medic.png); }
+.support { background-image: url(/images/kf/perks/support.png); }
+.sharpshooter { background-image: url(/images/kf/perks/sharpshooter.png); }
+.commando { background-image: url(/images/kf/perks/commando.png); }
+.berserker { background-image: url(/images/kf/perks/berserker.png); }
+.firebug { background-image: url(/images/kf/perks/firebug.png); }
+.demolition { background-image: url(/images/kf/perks/demolition.png); }
+.none { background-image: url(/images/kf/perks/none.png); }
 
 /**
  * maps area

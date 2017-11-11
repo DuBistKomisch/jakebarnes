@@ -30,12 +30,6 @@ fn kf() -> Template {
     Template::render("kf", {})
 }
 
-// load assets
-#[get("/assets/<file..>")]
-fn assets(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new("assets/").join(file)).ok()
-}
-
 // if nothing else matches, try loading a public file
 #[get("/<file..>", rank = 1)]
 fn public(file: PathBuf) -> Option<NamedFile> {
@@ -47,7 +41,6 @@ fn main() {
         .mount("/", routes![
              home,
              kf,
-             assets,
              public
         ])
         .attach(Template::fairing())
