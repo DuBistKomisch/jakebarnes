@@ -1,0 +1,23 @@
+{{#*inline "body"}}
+  <h1>Jake Barnes</h1>
+  <p>Welcome! I'm a {{age}}-year-old guy who lives in Melbourne, Australia.</p>
+  <p>My hobbies include learning new things, playing indie games, and telling people they're wrong on Reddit.</p>
+  <p>I'm the lead developer at <a href="https://www.vivi.io">Vivi</a>, a startup wireless screen sharing solution.</p>
+  <p>Check out some of the other stuff I've made in the menu up there. &#x2197;&#xfe0f;</p>
+  {{> components/permalink tagName="h3" title="Contact" slug="contact" }}
+  <p>If you want to get in touch, your best bet is to send me an email at me [at] jakebarn [dot] es.</p>
+  <p>If you'd rather, you can try one of my "social" accounts:</p>
+  <ul>
+    <li><a href="https://www.github.com/dubistkomisch">GitHub</a> (personal/professional)</li>
+    <li><a href="https://au.linkedin.com/pub/jake-barnes/56/2aa/a6a">LinkedIn</a> (professional, rarely used)</li>
+    <li><a href="https://www.facebook.com/jakebarnes">Facebook</a> (personal)</li>
+    <li><a href="https://steamcommunity.com/id/dubistkomisch">Steam</a> (personal)</li>
+  </ul>
+  <p>Like what I do? Feel free to support me!</p>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick" />
+    <input type="hidden" name="hosted_button_id" value="KEWJH4SPPEMFE" />
+    <input type="image" src="/assets/images/support.png" width="142" height="37" name="submit" alt="PayPal — The safer, easier way to pay online." />
+  </form>
+{{/inline}}
+{{~> layouts/default ~}}
