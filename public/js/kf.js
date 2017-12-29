@@ -302,7 +302,7 @@ function processAchievements(list, base)
   
   for (var i = 0; i < list.length; i++)
   {
-    var $achievement = $('<article id="' + list[i].id + '"><div><img src="' + ($('#old').prop('checked') ? '/assets/images/kf/achievements/' + list[i].id : 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/' + list[i].icon) + '.jpg" alt="icon" /><h3><a href="#' + list[i].id + '">' + list[i].name + '</a></h3><p>' + list[i].description + '</p><p><span class="tag">' + list[i].rate + '</span></p></div></article>');
+    var $achievement = $('<article id="' + list[i].id + '"><div><img src="' + ($('#old').prop('checked') ? '/images/kf/achievements/' + list[i].id : 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/1250/' + list[i].icon) + '.jpg" alt="icon" /><h3><a href="#' + list[i].id + '">' + list[i].name + '</a></h3><p>' + list[i].description + '</p><p><span class="tag">' + list[i].rate + '</span></p></div></article>');
     // perk
     if (list[i].perk != undefined)
       $achievement.find('div:nth-of-type(1)').addClass(list[i].perk);
