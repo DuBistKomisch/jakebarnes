@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["Jake Barnes <me@jakebarn.es>"]
 
 [dependencies]
+base64 = "0.9.0"
 chrono = "0.4.0"
 rocket = "0.3.3"
 rocket_codegen = "0.3.3"

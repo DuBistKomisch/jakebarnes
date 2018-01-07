@@ -1,15 +1,20 @@
+#![feature(custom_derive)]
 #![feature(plugin)]
 #![plugin(rocket_codegen)]
 
+extern crate base64;
 extern crate chrono;
 extern crate rocket;
 extern crate rocket_contrib;
 #[macro_use] extern crate serde_derive;
 
 use std::path::{Path, PathBuf};
+use std::process::{Command, Output};
+use std::str;
 
 use chrono::prelude::*;
 
+use rocket::request::Form;
 use rocket::response::NamedFile;
 
 use rocket_contrib::Template;
@@ -49,6 +54,51 @@ fn pd2() -> Template {
     Template::render("pd2", {})
 }
 
+// paypal 2fa
+#[derive(FromForm)]
+struct PaypalForm {
+    identity: String,
+    issuer: String
+}
+#[derive(Serialize)]
+struct PaypalContext {
+    identity: String,
+    issuer: String,
+    serial: String,
+    url: String,
+    qr_code: String
+}
+fn run_command<T: Into<String>>(command: T) -> Result<Output,Box<std::error::Error>> {
+    let command = command.into();
+    let output = Command::new("bash")
+        .arg("-o")
+        .arg("pipefail")
+        .arg("-c")
+        .arg(&command)
+        .output()?;
+    if !output.status.success() {
+        return Err(Box::from(format!("command failed: {}", &command)));
+    }
+    Ok(output)
+}
+#[get("/paypal")]
+fn paypal() -> Template {
+    Template::render("paypal", {})
+}
+#[post("/paypal", data = "<data>")]
+fn paypal_generate(data: Form<PaypalForm>) -> Result<Template,Box<std::error::Error>> {
+    let identity = data.get().identity.clone();
+    let issuer = data.get().issuer.clone();
+    let output = run_command("vipaccess provision -p -t VSMT | awk -F '[ :/?=&]' 'NR==2 { print $6; print $8 }'")?;
+    let output: Vec<_> = str::from_utf8(&output.stdout)?.split_whitespace().collect();
+    let serial = String::from(*output.get(0).ok_or("no serial")?);
+    let secret = String::from(*output.get(1).ok_or("no secret")?);
+    let url = format!("otpauth://totp/{}?secret={}&issuer={}", identity, secret, issuer);
+    let output = run_command(format!("qrencode -o - '{}'", url))?;
+    let qr_code = base64::encode(&output.stdout);
+    Ok(Template::render("paypal", PaypalContext { identity, issuer, serial, url, qr_code }))
+}
+
 // if nothing else matches, try loading a public file
 #[get("/<file..>", rank = 1)]
 fn public(file: PathBuf) -> Option<NamedFile> {
@@ -64,6 +114,8 @@ fn main() {
              kf,
              kf2,
              pd2,
+             paypal,
+             paypal_generate,
              public
         ])
         .attach(Template::fairing())
