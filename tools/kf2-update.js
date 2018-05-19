@@ -1,5 +1,5 @@
 var fs = require('fs');
-var http = require('http');
+var https = require('https');
 var xml2json = require('xml2json');
 var slug = require('slug');
 
@@ -9,7 +9,7 @@ var TABLES_FILE = '../public/kf2/tables.json';
 var global = null;
 var meta = null;
 
-http.get({host: 'api.steampowered.com', path: '/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=232090&format=json'}, function (res) {
+https.get('https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=232090&format=json', function (res) {
   var response = '';
   res.on('data', function (chunk) {
     response += chunk;
@@ -17,7 +17,7 @@ http.get({host: 'api.steampowered.com', path: '/ISteamUserStats/GetGlobalAchieve
   }).on('end', function () {
     console.log();
     global = response;
-    http.get({host: 'steamcommunity.com', path: '/id/dubistkomisch/stats/appid/232090/achievements?xml=1'}, function (res) {
+    https.get('https://steamcommunity.com/id/dubistkomisch/stats/appid/232090/achievements?xml=1', function (res) {
       var response = '';
       res.on('data', function (chunk) {
         response += chunk;
