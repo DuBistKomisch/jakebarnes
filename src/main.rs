@@ -7,6 +7,7 @@ extern crate chrono;
 extern crate rocket;
 extern crate rocket_contrib;
 #[macro_use] extern crate serde_derive;
+extern crate url;
 
 use std::path::{Path, PathBuf};
 use std::process::{Command, Output};
@@ -18,6 +19,8 @@ use rocket::request::Form;
 use rocket::response::NamedFile;
 
 use rocket_contrib::Template;
+
+use url::Url;
 
 // home page
 #[derive(Serialize)]
@@ -89,11 +92,18 @@ fn paypal() -> Template {
 fn paypal_generate(data: Form<PaypalForm>) -> Result<Template,Box<std::error::Error>> {
     let identity = data.get().identity.clone();
     let issuer = data.get().issuer.clone();
-    let output = run_command("vipaccess provision -p -t VSMT | awk -F '[ :/?=&]' 'NR==2 { print $6; if ($7 == \"secret\") { print $8 } else { print $10 } }'")?;
-    let output: Vec<_> = str::from_utf8(&output.stdout)?.split_whitespace().collect();
-    let serial = String::from(*output.get(0).ok_or("no serial")?);
-    let secret = String::from(*output.get(1).ok_or("no secret")?);
-    let url = format!("otpauth://totp/{}?secret={}&issuer={}", identity, secret, issuer);
+    // provision into url
+    let output = run_command("vipaccess provision -p -t VSMT | grep otpauth")?;
+    let mut url = Url::parse(str::from_utf8(&output.stdout)?.trim())?;
+    // extract serial from url
+    let serial = String::from(url.path().split(':').next_back().ok_or("no serial")?);
+    // replace identity in url
+    url.set_path(&format!("/{}", identity));
+    // replace issuer in url
+    let pairs: Vec<_> = url.query_pairs().into_owned().filter(|(k, _v)| k != "issuer").collect();
+    url.query_pairs_mut().clear().extend_pairs(pairs).append_pair("issuer", &issuer);
+    // qr encode url
+    let url = url.into_string();
     let output = run_command(format!("qrencode -o - '{}'", url))?;
     let qr_code = base64::encode(&output.stdout);
     Ok(Template::render("paypal", PaypalContext { identity, issuer, serial, url, qr_code }))
