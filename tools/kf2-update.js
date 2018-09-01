@@ -69,7 +69,7 @@ function go()
     var node = {
       'id': slug(mainMeta[i].name).toLowerCase(),
       'api': mainMeta[i].apiname,
-      'icon': mainMeta[i].iconClosed.substr(75, 40),
+      'icon': mainMeta[i].iconClosed.substr(73, 40),
       'name': mainMeta[i].name,
       'description': mainMeta[i].description,
       'rate': 0.0
