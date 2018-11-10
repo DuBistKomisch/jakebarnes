@@ -10,7 +10,7 @@
         "name": "School's Out Forever",
         "description": "Complete the Training Floor",
         "link": "",
-        "rate": 23.89
+        "rate": 24.7
       },
       {
         "id": "dead-silence",
@@ -19,7 +19,7 @@
         "name": "Dead Silence",
         "description": "Kill a Siren Before She Screams",
         "link": "",
-        "rate": 53.2
+        "rate": 55.09
       },
       {
         "id": "quick-on-the-trigger",
@@ -28,7 +28,7 @@
         "name": "Quick on the Trigger",
         "description": "Kill the Patriarch Before He Has a Chance to Heal",
         "link": "",
-        "rate": 12.8
+        "rate": 13.6
       },
       {
         "id": "its-only-a-flesh-wound",
@@ -37,7 +37,7 @@
         "name": "It's Only a Flesh Wound",
         "description": "Kill Your First Fleshpound",
         "link": "",
-        "rate": 55.7
+        "rate": 57.4
       },
       {
         "id": "hack-and-slash",
@@ -46,7 +46,7 @@
         "name": "Hack and Slash",
         "description": "Kill Your First Scrake",
         "link": "",
-        "rate": 56.29
+        "rate": 57.9
       },
       {
         "id": "die-volter",
@@ -55,7 +55,7 @@
         "name": "Die Volter",
         "description": "Kill Dr. Hans Volter For the First Time",
         "link": "",
-        "rate": 30.89
+        "rate": 31.89
       },
       {
         "id": "win-1",
@@ -64,7 +64,7 @@
         "name": "Win 1",
         "description": "Win 1 Multiplayer Match",
         "link": "",
-        "rate": 52.9
+        "rate": 54.29
       },
       {
         "id": "win-10",
@@ -73,7 +73,7 @@
         "name": "Win 10",
         "description": "Win 10 Multiplayer Matches",
         "link": "",
-        "rate": 24.39
+        "rate": 25.1
       },
       {
         "id": "win-25",
@@ -82,7 +82,7 @@
         "name": "Win 25",
         "description": "Win 25 Multiplayer Matches",
         "link": "",
-        "rate": 12.6
+        "rate": 12.89
       },
       {
         "id": "vs-zed-win",
@@ -91,7 +91,7 @@
         "name": "VS Zed Win",
         "description": "Win a VS Survival Round Playing as the Zeds",
         "link": "",
-        "rate": 9
+        "rate": 8.89
       },
       {
         "id": "vs-human-win",
@@ -109,7 +109,7 @@
         "name": "Hold Out",
         "description": "Weld a Door to 100%",
         "link": "",
-        "rate": 43.79
+        "rate": 44.79
       },
       {
         "id": "i-got-your-back",
@@ -118,7 +118,7 @@
         "name": "I Got Your Back",
         "description": "Heal a Teammate With the Syringe",
         "link": "",
-        "rate": 42.09
+        "rate": 43.2
       },
       {
         "id": "benefactor",
@@ -127,7 +127,7 @@
         "name": "Benefactor",
         "description": "Give 1000 Dosh to Another Player During a Multiplayer Match",
         "link": "",
-        "rate": 34.59
+        "rate": 35
       },
       {
         "id": "deaths-door",
@@ -135,7 +135,7 @@
         "icon": "382680a850833e6d1b227c6b92d066ebb892ce0e",
         "name": "Death's Door",
         "description": "Unlock the Alchemist Room in Monster Ball",
-        "rate": 0
+        "rate": 4.9
       }
     ]
   }
