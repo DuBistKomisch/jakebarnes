@@ -52,6 +52,11 @@ fn kf2() -> Template {
     Template::render("kf2", {})
 }
 
+#[get("/pattomobile")]
+fn pattomobile() -> Template {
+    Template::render("pattomobile", {})
+}
+
 #[get("/pd2")]
 fn pd2() -> Template {
     Template::render("pd2", {})
@@ -123,6 +128,7 @@ fn main() {
              ds2sm_embed,
              kf,
              kf2,
+             pattomobile,
              pd2,
              paypal,
              paypal_generate,
