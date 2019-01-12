@@ -73,6 +73,7 @@ struct PaypalContext {
     identity: String,
     issuer: String,
     serial: String,
+    secret: String,
     url: String,
     qr_code: String
 }
@@ -100,8 +101,9 @@ fn paypal_generate(data: Form<PaypalForm>) -> Result<Template,Box<std::error::Er
     // provision into url
     let output = run_command("vipaccess provision -p -t VSMT | grep otpauth")?;
     let mut url = Url::parse(str::from_utf8(&output.stdout)?.trim())?;
-    // extract serial from url
+    // extract serial and secret from url
     let serial = String::from(url.path().split(':').next_back().ok_or("no serial")?);
+    let secret = String::from(url.query_pairs().find(|(k, _v)| k == "secret").ok_or("no secret")?.1);
     // replace identity in url
     url.set_path(&format!("/{}", identity));
     // replace issuer in url
@@ -111,7 +113,7 @@ fn paypal_generate(data: Form<PaypalForm>) -> Result<Template,Box<std::error::Er
     let url = url.into_string();
     let output = run_command(format!("qrencode -o - '{}'", url))?;
     let qr_code = base64::encode(&output.stdout);
-    Ok(Template::render("paypal", PaypalContext { identity, issuer, serial, url, qr_code }))
+    Ok(Template::render("paypal", PaypalContext { identity, issuer, serial, secret, url, qr_code }))
 }
 
 // if nothing else matches, try loading a public file

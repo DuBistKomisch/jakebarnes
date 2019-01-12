@@ -26,6 +26,7 @@
     <p>Serial Number: {{serial}}</p>
     <p>Import URL: <a href="{{url}}">{{url}}</a></p>
     <p>QR Code: <img src="data:image/png;base64,{{qr_code}}" alt="{{url}}" /></p>
+    <p>Secret (for manual import): {{secret}}</p>
   {{/if}}
 {{/inline}}
 {{~> layouts/default title="PayPal 2FA"}}
