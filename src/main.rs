@@ -104,8 +104,8 @@ fn paypal_generate(data: Form<PaypalForm>) -> Result<Template,Box<std::error::Er
     // extract serial and secret from url
     let serial = String::from(url.path().split(':').next_back().ok_or("no serial")?);
     let secret = String::from(url.query_pairs().find(|(k, _v)| k == "secret").ok_or("no secret")?.1);
-    // replace identity in url
-    url.set_path(&format!("/{}", identity));
+    // replace label in url
+    url.set_path(&format!("/{}:{}", issuer, identity));
     // replace issuer in url
     let pairs: Vec<_> = url.query_pairs().into_owned().filter(|(k, _v)| k != "issuer").collect();
     url.query_pairs_mut().clear().extend_pairs(pairs).append_pair("issuer", &issuer);
