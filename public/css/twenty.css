@@ -1,0 +1,24 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body.go {
+  background: green;
+}
+
+body.stop {
+  background: red;
+}
+
+#text {
+  color: white;
+  font-family: monospace;
+  font-size: calc(20vw + 5vh);
+}

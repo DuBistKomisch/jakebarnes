@@ -42,6 +42,10 @@ fn pd2() -> Template {
     Template::render("pd2", {})
 }
 
+#[get("/twenty")]
+fn twenty() -> Template {
+    Template::render("twenty", {})
+}
 
 fn main() {
     rocket::ignite()
@@ -54,7 +58,8 @@ fn main() {
              pattomobile,
              pd2,
              paypal::get,
-             paypal::post
+             paypal::post,
+             twenty
         ])
         .mount("/", StaticFiles::new("public", Options::None))
         .attach(Template::fairing())
