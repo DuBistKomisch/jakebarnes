@@ -1,24 +1,21 @@
-#![feature(custom_derive)]
-#![feature(plugin)]
-#![plugin(rocket_codegen)]
+#![feature(proc_macro_hygiene, decl_macro)]
 
 extern crate base64;
 extern crate chrono;
-extern crate rocket;
+#[macro_use] extern crate rocket;
 extern crate rocket_contrib;
 #[macro_use] extern crate serde_derive;
 extern crate url;
 
-use std::path::{Path, PathBuf};
 use std::process::{Command, Output};
 use std::str;
 
 use chrono::prelude::*;
 
 use rocket::request::Form;
-use rocket::response::NamedFile;
 
-use rocket_contrib::Template;
+use rocket_contrib::serve::{Options, StaticFiles};
+use rocket_contrib::templates::Template;
 
 use url::Url;
 
@@ -96,8 +93,8 @@ fn paypal() -> Template {
 }
 #[post("/paypal", data = "<data>")]
 fn paypal_generate(data: Form<PaypalForm>) -> Result<Template,Box<std::error::Error>> {
-    let identity = data.get().identity.clone();
-    let issuer = data.get().issuer.clone();
+    let identity = data.identity.clone();
+    let issuer = data.issuer.clone();
     // provision into url
     let output = run_command("vipaccess provision -p -t VSMT | grep otpauth")?;
     let mut url = Url::parse(str::from_utf8(&output.stdout)?.trim())?;
@@ -116,12 +113,6 @@ fn paypal_generate(data: Form<PaypalForm>) -> Result<Template,Box<std::error::Er
     Ok(Template::render("paypal", PaypalContext { identity, issuer, serial, secret, url, qr_code }))
 }
 
-// if nothing else matches, try loading a public file
-#[get("/<file..>", rank = 1)]
-fn public(file: PathBuf) -> Option<NamedFile> {
-    NamedFile::open(Path::new("public/").join(file)).ok()
-}
-
 fn main() {
     rocket::ignite()
         .mount("/", routes![
@@ -133,9 +124,9 @@ fn main() {
              pattomobile,
              pd2,
              paypal,
-             paypal_generate,
-             public
+             paypal_generate
         ])
+        .mount("/", StaticFiles::new("public", Options::None))
         .attach(Template::fairing())
         .launch();
 }
