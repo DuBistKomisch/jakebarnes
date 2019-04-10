@@ -4,6 +4,12 @@
   {{> components/asset-js name="twenty"}}
 {{/inline}}
 {{~#*inline "body"}}
-  <p id="text"></p>
+  <select id="mode">
+    <option value="twenty">20-20-20</option>
+    <option value="stand">Sit-Stand</option>
+  </select>
+  <section id="fill">
+    <p id="text"></p>
+  </section>
 {{/inline}}
 {{~> layouts/default title="No Bullshit 20-20-20 Timer"}}
