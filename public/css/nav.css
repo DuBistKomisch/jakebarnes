@@ -11,33 +11,40 @@
   padding: 0;
 
   width: 32px;
-  max-height: 32px;
+  height: 32px;
   overflow: hidden;
-  transition: width 0.25s, max-height 0.25s;
+  transition: width 0.25s, height 0.25s;
 
   background: #222;
   color: #eee;
   font-family: sans-serif;
   font-size: 12pt;
+
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .nav:hover {
-  width: 128px;
-  max-height: 384px;
+  width: 192px;
+  height: 100%;
+  overflow-y: auto;
 }
 
-.nav > li {
-  height: 32px;
+.nav > li,
+.nav > li > ul > li {
+  min-height: 32px;
   line-height: 32px;
   white-space: nowrap;
 
   list-style-type: none;
 }
 
-.nav > li > a {
+.nav > li > a,
+.nav > li > ul > li > a {
   display: block;
   box-sizing: border-box;
-  padding: 0 8px;
 
   color: inherit;
   text-decoration: inherit;
@@ -46,14 +53,37 @@
   transition: background 0.25s, color 0.25s;
 }
 
-.nav > li > a:hover {
+.nav > li > a {
+  padding-left: 8px;
+}
+
+.nav > li > ul > li >a {
+  padding-left: 16px;
+}
+
+.nav > li > a:hover:link,
+.nav > li > ul > li > a:hover:link {
   color: rgb(65, 131, 196);
+}
+.nav > li > a:hover,
+.nav > li > ul > li > a:hover {
   background: rgba(51, 51, 51, 1);
 }
 
 .nav > li > span.hamburger {
   display: inline-block;
-  Width: 32px;
+  width: 32px;
   text-align: center;
-  user-select: none;
+}
+
+.nav > li > ul {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s 0.1s;
+}
+
+.nav > li:hover > ul {
+  max-height: 200px;
+  transition: max-height 0.25s 0.25s;
 }
