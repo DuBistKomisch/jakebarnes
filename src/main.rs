@@ -1,17 +1,13 @@
 #![feature(proc_macro_hygiene, decl_macro)]
 
-extern crate base64;
-extern crate chrono;
-#[macro_use] extern crate rocket;
-extern crate rocket_contrib;
-#[macro_use] extern crate serde_derive;
-extern crate url;
-
 mod home;
 mod paypal;
 
-use rocket_contrib::serve::{Options, StaticFiles};
-use rocket_contrib::templates::Template;
+use rocket::{get, routes};
+use rocket_contrib::{
+    serve::{Options, StaticFiles},
+    templates::Template
+};
 
 #[get("/ds2sm")]
 fn ds2sm() -> Template {

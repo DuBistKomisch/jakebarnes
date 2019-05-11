@@ -1,10 +1,17 @@
-use rocket::request::Form;
-
+use rocket::{
+    get,
+    post,
+    request::Form,
+    // TODO should be request::FromForm https://github.com/SergioBenitez/Rocket/issues/903
+    FromForm
+};
 use rocket_contrib::templates::Template;
-
-use std::process::{Command, Output};
-use std::str;
-
+use serde::Serialize;
+use std::{
+    error::Error,
+    process::{Command, Output},
+    str
+};
 use url::Url;
 
 #[derive(FromForm)]
@@ -23,7 +30,7 @@ struct PaypalContext {
     qr_code: String
 }
 
-fn run_command<T: Into<String>>(command: T) -> Result<Output,Box<std::error::Error>> {
+fn run_command<T: Into<String>>(command: T) -> Result<Output, Box<dyn Error>> {
     let command = command.into();
     let output = Command::new("bash")
         .arg("-o")
@@ -43,7 +50,7 @@ pub fn get() -> Template {
 }
 
 #[post("/paypal", data = "<data>")]
-pub fn post(data: Form<PaypalForm>) -> Result<Template,Box<std::error::Error>> {
+pub fn post(data: Form<PaypalForm>) -> Result<Template, Box<dyn Error>> {
     let identity = data.identity.clone();
     let issuer = data.issuer.clone();
     // provision into url

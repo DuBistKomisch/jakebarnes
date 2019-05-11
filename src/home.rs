@@ -1,6 +1,7 @@
 use chrono::{Local, TimeZone};
-
+use rocket::get;
 use rocket_contrib::templates::Template;
+use serde::Serialize;
 
 #[derive(Serialize)]
 struct HomeContext {
