@@ -17,6 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const text = document.getElementById('text');
   const modeSelect = document.getElementById('mode');
 
+  if (location.hash) {
+    const hashMode = location.hash.substring(1);
+    if (limits.hasOwnProperty(hashMode)) {
+      mode = hashMode;
+      modeSelect.value = hashMode;
+    }
+  }
+
   const tick = () => {
     if (count === 0) {
       if (stop) {
