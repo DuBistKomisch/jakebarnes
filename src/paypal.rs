@@ -46,7 +46,7 @@ fn run_command<T: Into<String>>(command: T) -> Result<Output, Box<dyn Error>> {
 
 #[get("/paypal")]
 pub fn get() -> Template {
-    Template::render("paypal", {})
+    Template::render("paypal", ())
 }
 
 #[post("/paypal", data = "<data>")]

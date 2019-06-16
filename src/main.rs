@@ -11,36 +11,36 @@ use rocket_contrib::{
 
 #[get("/ds2sm")]
 fn ds2sm() -> Template {
-    Template::render("ds2sm", {})
+    Template::render("ds2sm", ())
 }
 #[get("/ds2sm/embed.html")]
 fn ds2sm_embed() -> Template {
-    Template::render("ds2sm_embed", {})
+    Template::render("ds2sm_embed", ())
 }
 
 #[get("/kf")]
 fn kf() -> Template {
-    Template::render("kf", {})
+    Template::render("kf", ())
 }
 
 #[get("/kf2")]
 fn kf2() -> Template {
-    Template::render("kf2", {})
+    Template::render("kf2", ())
 }
 
 #[get("/pattomobile")]
 fn pattomobile() -> Template {
-    Template::render("pattomobile", {})
+    Template::render("pattomobile", ())
 }
 
 #[get("/pd2")]
 fn pd2() -> Template {
-    Template::render("pd2", {})
+    Template::render("pd2", ())
 }
 
 #[get("/twenty")]
 fn twenty() -> Template {
-    Template::render("twenty", {})
+    Template::render("twenty", ())
 }
 
 fn main() {
