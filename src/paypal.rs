@@ -1,9 +1,7 @@
 use rocket::{
     get,
     post,
-    request::Form,
-    // TODO should be request::FromForm https://github.com/SergioBenitez/Rocket/issues/903
-    FromForm
+    request::{Form, FromForm}
 };
 use rocket_contrib::templates::Template;
 use serde::Serialize;

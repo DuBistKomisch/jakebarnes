@@ -6,16 +6,16 @@ edition = "2018"
 
 [dependencies]
 base64 = "^0.10.1"
-chrono = "^0.4.6"
-rocket = "^0.4.1"
-serde_json = "^1.0.39"
+chrono = "^0.4.7"
+rocket = "^0.4.2"
+serde_json = "^1.0.40"
 url = "^1.7.2"
 
 [dependencies.rocket_contrib]
-version = "^0.4.1"
+version = "^0.4.2"
 default-features = false
 features = ["handlebars_templates", "serve"]
 
 [dependencies.serde]
-version = "^1.0.92"
+version = "^1.0.94"
 features = ["derive"]
