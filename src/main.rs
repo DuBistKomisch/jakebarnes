@@ -2,6 +2,7 @@
 
 mod home;
 mod paypal;
+mod steam;
 
 use rocket::{get, routes};
 use rocket_contrib::{
@@ -43,21 +44,29 @@ fn twenty() -> Template {
     Template::render("twenty", ())
 }
 
-fn main() {
+fn main() -> Result<(), Box<dotenv::Error>> {
+    dotenv::dotenv()?;
+
     rocket::ignite()
         .mount("/", routes![
-             home::get,
-             ds2sm,
-             ds2sm_embed,
-             kf,
-             kf2,
-             pattomobile,
-             pd2,
-             paypal::get,
-             paypal::post,
-             twenty
+            home::get,
+            ds2sm,
+            ds2sm_embed,
+            kf,
+            kf2,
+            pattomobile,
+            pd2,
+            paypal::get,
+            paypal::post,
+            twenty
+        ])
+        .mount("/steam", routes![
+            steam::resolve,
+            steam::stats
         ])
         .mount("/", StaticFiles::new("public", Options::None))
         .attach(Template::fairing())
         .launch();
+
+    Ok(())
 }

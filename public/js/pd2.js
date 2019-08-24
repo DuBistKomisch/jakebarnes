@@ -55,11 +55,11 @@ function filter()
   if (isNaN(Number($('#filter').val())))
   {
     // not a number, assume username and resolve to SteamID64
-    get_filter('/ISteamUser/ResolveVanityURL/v0001/?key=80425AE7E1845E2B033ECA38E8F7BCBE&vanityurl=' + $('#filter').val(), 'Resolving username...', function (data)
+    get_filter('/steam/resolve?vanityurl=' + $('#filter').val(), 'Resolving username...', function (data)
     {
       if (data.response.steamid != undefined)
       {
-        get_filter('/ISteamUserStats/GetUserStatsForGame/v0002/?appid=218620&key=80425AE7E1845E2B033ECA38E8F7BCBE&steamid=' + data.response.steamid, 'Fetching user stats...', function (data)
+        get_filter('/steam/stats?appid=218620&steamid=' + data.response.steamid, 'Fetching user stats...', function (data)
         {
           if (data.playerstats != undefined)
           {
@@ -86,7 +86,7 @@ function filter()
   else
   {
     // number, assume SteamID64
-    get_filter('/ISteamUserStats/GetUserStatsForGame/v0002/?appid=218620&key=80425AE7E1845E2B033ECA38E8F7BCBE&steamid=' + $('#filter').val(), 'Fetching user stats...', function (data)
+    get_filter('/steam/stats?appid=218620&steamid=' + $('#filter').val(), 'Fetching user stats...', function (data)
     {
       if (data.playerstats != undefined)
       {
