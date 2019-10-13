@@ -109,7 +109,12 @@ pub fn resolve(vanityurl: String) -> LazyResult<SteamResponse> {
     steam_request("ISteamUser/ResolveVanityURL/v0001", &[("vanityurl", &vanityurl)])
 }
 
-#[get("/stats?<appid>&<steamid>")]
-pub fn stats(appid: String, steamid: String) -> LazyResult<SteamResponse> {
+#[get("/stats/global?<gameid>")]
+pub fn stats_global(gameid: String) -> LazyResult<SteamResponse> {
+    steam_request("ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002", &[("gameid", &gameid)])
+}
+
+#[get("/stats/user?<appid>&<steamid>")]
+pub fn stats_user(appid: String, steamid: String) -> LazyResult<SteamResponse> {
     steam_request("ISteamUserStats/GetUserStatsForGame/v0002", &[("appid", &appid), ("steamid", &steamid)])
 }

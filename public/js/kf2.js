@@ -65,7 +65,7 @@ function filter()
     {
       if (data.response.steamid != undefined)
       {
-        get_filter('/steam/stats?appid=232090&steamid=' + data.response.steamid, 'Fetching user stats...', function (data)
+        get_filter('/steam/stats/user?appid=232090&steamid=' + data.response.steamid, 'Fetching user stats...', function (data)
         {
           if (data.playerstats != undefined)
           {
@@ -92,7 +92,7 @@ function filter()
   else
   {
     // number, assume SteamID64
-    get_filter('/steam/stats?appid=232090&steamid=' + $('#filter').val(), 'Fetching user stats...', function (data)
+    get_filter('/steam/stats/user?appid=232090&steamid=' + $('#filter').val(), 'Fetching user stats...', function (data)
     {
       if (data.playerstats != undefined)
       {
