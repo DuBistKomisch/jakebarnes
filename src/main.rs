@@ -63,6 +63,7 @@ fn main() -> Result<(), Box<dotenv::Error>> {
         .mount("/steam", routes![
             steam::resolve,
             steam::stats_global,
+            steam::stats_schema,
             steam::stats_user
         ])
         .mount("/", StaticFiles::new("public", Options::None))

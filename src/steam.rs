@@ -114,6 +114,11 @@ pub fn stats_global(gameid: String) -> LazyResult<SteamResponse> {
     steam_request("ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002", &[("gameid", &gameid)])
 }
 
+#[get("/stats/schema?<appid>")]
+pub fn stats_schema(appid: String) -> LazyResult<SteamResponse> {
+    steam_request("ISteamUserStats/GetSchemaForGame/v2", &[("appid", &appid)])
+}
+
 #[get("/stats/user?<appid>&<steamid>")]
 pub fn stats_user(appid: String, steamid: String) -> LazyResult<SteamResponse> {
     steam_request("ISteamUserStats/GetUserStatsForGame/v0002", &[("appid", &appid), ("steamid", &steamid)])
