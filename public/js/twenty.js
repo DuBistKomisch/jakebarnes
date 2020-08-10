@@ -12,6 +12,10 @@ let mode = 'twenty';
 let stop = true;
 let count = 0;
 
+if (Notification.permission === 'default') {
+  Notification.requestPermission();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const fill = document.getElementById('fill');
   const text = document.getElementById('text');
@@ -25,6 +29,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  const notify = () => {
+    if (Notification.permission !== 'granted') {
+      return;
+    }
+
+    let message;
+
+    if (mode === 'twenty') {
+      if (!stop) {
+        // can't see the notification if they're looking away!
+        return;
+      }
+
+      message = 'Time to look away!';
+    } else {
+      if (stop) {
+        message = 'Time to stand up!';
+      } else {
+        message = 'Time to sit down!';
+      }
+    }
+
+    new Notification(message);
+  };
+
   const tick = () => {
     if (count === 0) {
       if (stop) {
@@ -36,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         count = limits[mode].stop;
         fill.className = 'stop';
       }
+
+      notify();
     } else {
       count--;
     }
