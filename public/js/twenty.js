@@ -8,9 +8,22 @@ const limits = {
     stop: 60 * 60
   }
 };
+const notifications = {
+  twenty: {
+    stop: 'Time to look away'
+  },
+  stand: {
+    go: 'Time to sit down!',
+    stop: 'Time to stand up!'
+  }
+};
 let mode = 'twenty';
 let stop = true;
 let count = 0;
+
+if (Notification.permission === 'default') {
+  Notification.requestPermission();
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   const fill = document.getElementById('fill');
@@ -25,7 +38,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const tick = () => {
+  const notify = () => {
+    if (Notification.permission !== 'granted') {
+      return;
+    }
+
+    const message = notifications[mode][stop ? 'stop' : 'go'];
+    if (!message) {
+      return;
+    }
+
+    new Notification(message);
+  };
+
+  const tick = (doNotify = true) => {
     if (count === 0) {
       if (stop) {
         stop = false;
@@ -35,6 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
         stop = true;
         count = limits[mode].stop;
         fill.className = 'stop';
+      }
+
+      if (doNotify) {
+        notify();
       }
     } else {
       count--;
@@ -46,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fill.addEventListener('click', () => {
     count = 0;
-    tick();
+    tick(false);
   });
 
   modeSelect.addEventListener('change', () => {
@@ -57,5 +87,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   setInterval(tick, 1000);
-  tick();
+  tick(false);
 });
