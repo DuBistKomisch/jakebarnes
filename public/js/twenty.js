@@ -8,6 +8,15 @@ const limits = {
     stop: 60 * 60
   }
 };
+const notifications = {
+  twenty: {
+    stop: 'Time to look away'
+  },
+  stand: {
+    go: 'Time to sit down!',
+    stop: 'Time to stand up!'
+  }
+};
 let mode = 'twenty';
 let stop = true;
 let count = 0;
@@ -34,27 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    let message;
-
-    if (mode === 'twenty') {
-      if (!stop) {
-        // can't see the notification if they're looking away!
-        return;
-      }
-
-      message = 'Time to look away!';
-    } else {
-      if (stop) {
-        message = 'Time to stand up!';
-      } else {
-        message = 'Time to sit down!';
-      }
+    const message = notifications[mode][stop ? 'stop' : 'go'];
+    if (!message) {
+      return;
     }
 
     new Notification(message);
   };
 
-  const tick = () => {
+  const tick = (doNotify = true) => {
     if (count === 0) {
       if (stop) {
         stop = false;
@@ -66,7 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
         fill.className = 'stop';
       }
 
-      notify();
+      if (doNotify) {
+        notify();
+      }
     } else {
       count--;
     }
@@ -77,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fill.addEventListener('click', () => {
     count = 0;
-    tick();
+    tick(false);
   });
 
   modeSelect.addEventListener('change', () => {
@@ -88,5 +87,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   setInterval(tick, 1000);
-  tick();
+  tick(false);
 });
