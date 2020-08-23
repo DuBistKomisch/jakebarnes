@@ -1,0 +1,13 @@
+[Unit]
+Description=jakebarnes
+After=network.target
+
+[Service]
+Type=simple
+ExecStartPre=-/usr/bin/docker stop jakebarnes
+ExecStartPre=-/usr/bin/docker rm jakebarnes
+ExecStart=/usr/bin/docker run -p 8000:8000 --name jakebarnes --rm jakebarnes
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
