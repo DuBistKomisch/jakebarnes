@@ -1,4 +1,4 @@
-FROM rustlang/rust:nightly-buster
+FROM rust:1-buster
 
 RUN apt-get update && \
     apt-get install -y python3-pip qrencode && \

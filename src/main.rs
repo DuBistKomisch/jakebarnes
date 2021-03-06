@@ -1,12 +1,10 @@
-#![feature(proc_macro_hygiene, decl_macro)]
-
 mod home;
 mod paypal;
 mod steam;
 
 use rocket::{get, routes};
 use rocket_contrib::{
-    serve::{Options, StaticFiles},
+    serve::{StaticFiles, crate_relative},
     templates::Template
 };
 
@@ -44,7 +42,8 @@ fn twenty() -> Template {
     Template::render("twenty", ())
 }
 
-fn main() -> Result<(), Box<dotenv::Error>> {
+#[rocket::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenv::dotenv()?;
 
     rocket::ignite()
@@ -66,9 +65,10 @@ fn main() -> Result<(), Box<dotenv::Error>> {
             steam::stats_schema,
             steam::stats_user
         ])
-        .mount("/", StaticFiles::new("public", Options::None))
+        .mount("/", StaticFiles::from(crate_relative!("public")))
         .attach(Template::fairing())
-        .launch();
+        .launch()
+        .await?;
 
     Ok(())
 }
