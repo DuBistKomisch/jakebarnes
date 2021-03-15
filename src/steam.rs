@@ -1,9 +1,13 @@
+use futures::stream::TryStreamExt;
+use reqwest::{
+    Response as ReqwestResponse,
+    Result as ReqwestResult,
+    Url,
+    header
+};
 use rocket::{
     get,
-    http::{
-        ContentType,
-        Status
-    },
+    http::{ContentType, Status},
     request::Request,
     response::{
         Responder,
@@ -14,27 +18,51 @@ use rocket::{
 use std::{
     convert::TryFrom,
     env,
-    error::Error,
-    io::Cursor
+    io::{self, Cursor},
+    pin::Pin
 };
-use reqwest::{
-    Response as ReqwestResponse,
-    Result as ReqwestResult,
-    Url,
-    header
-};
+use thiserror::Error;
+use tokio::io::AsyncRead;
+use tokio_util::compat::FuturesAsyncReadCompatExt;
 
-type LazyError = Box<dyn Error>;
-type LazyResult<T> = Result<T, LazyError>;
+#[derive(Error, Debug)]
+pub enum SteamError {
+    #[error(transparent)]
+    EnvVarError(#[from] env::VarError),
+
+    #[error(transparent)]
+    IOError(#[from] io::Error),
+
+    #[error(transparent)]
+    ReqwestError(#[from] reqwest::Error),
+
+    #[error(transparent)]
+    ReqwestToStrError(#[from] header::ToStrError),
+
+    #[error(transparent)]
+    UrlParseError(#[from] url::ParseError),
+}
+
+type SteamResult<T> = Result<T, SteamError>;
+
+impl<'r> Responder<'r, 'static> for SteamError {
+    fn respond_to(self, _: &'r Request<'_>) -> RocketResult<'static> {
+        let description = self.to_string();
+        RocketResponse::build()
+            .status(Status::InternalServerError)
+            .header(ContentType::Plain)
+            .sized_body(None, Cursor::new(description))
+            .ok()
+    }
+}
 
 // translate response from reqwest to rocket
 
-#[derive(Debug)]
 pub enum SteamResponse {
     Full {
         status: Status,
         content_type: ContentType,
-        body: String
+        body: Pin<Box<dyn AsyncRead + Send>>
     },
     Status {
         status: Status
@@ -42,84 +70,80 @@ pub enum SteamResponse {
 }
 
 impl TryFrom<ReqwestResult<ReqwestResponse>> for SteamResponse {
-    type Error = LazyError;
+    type Error = SteamError;
 
-    fn try_from(result: ReqwestResult<ReqwestResponse>) -> LazyResult<Self> {
+    fn try_from(result: ReqwestResult<ReqwestResponse>) -> SteamResult<Self> {
         match result {
             Ok(response) => Self::try_from(response),
-            Err(_) => Ok(Self::from(Status::GatewayTimeout))
+            Err(_) => Ok(Self::Status { status: Status::GatewayTimeout })
         }
     }
 }
 
 impl TryFrom<ReqwestResponse> for SteamResponse {
-    type Error = LazyError;
+    type Error = SteamError;
 
-    fn try_from(mut response: ReqwestResponse) -> LazyResult<Self> {
+    fn try_from(response: ReqwestResponse) -> SteamResult<Self> {
         let status = response.status().as_u16();
         let status = Status::from_code(status).unwrap_or(Status::Ok);
         let content_type = response.headers().get(header::CONTENT_TYPE)
             .map(|ct| ct.to_str()).transpose()?
             .and_then(|ct| ContentType::parse_flexible(ct))
             .unwrap_or(ContentType::JSON);
-        let body = response.text()?;
+        // convert futures AsyncRead to tokio AsyncRead
+        // https://github.com/benkay86/async-applied/tree/master/reqwest-tokio-compat
+        let body = response.bytes_stream()
+            .map_err(|e| futures::io::Error::new(futures::io::ErrorKind::Other, e))
+            .into_async_read()
+            .compat();
+        let body = Box::pin(body);
         Ok(Self::Full { status, content_type, body })
     }
 }
 
-impl From<Status> for SteamResponse {
-    fn from(status: Status) -> Self {
-        Self::Status { status }
-    }
-}
-
-impl<'r> Responder<'r> for SteamResponse {
-    fn respond_to(self, _: &Request) -> RocketResult<'r> {
-        let mut response = RocketResponse::build();
+impl<'r> Responder<'r, 'static> for SteamResponse {
+    fn respond_to(self, request: &'r Request<'_>) -> RocketResult<'static> {
         match self {
             Self::Full { status, content_type, body } => {
-                response
+                RocketResponse::build()
                     .status(status)
                     .header(content_type)
-                    .sized_body(Cursor::new(body));
+                    .streamed_body(body)
+                    .ok()
             },
-            Self::Status { status } => {
-                response
-                    .status(status);
-            }
+            Self::Status { status } => status.respond_to(request)
         }
-        response.ok()
     }
 }
 
 // wrap steam api with reqwest
 
-fn steam_request(endpoint: &str, arguments: &[(&str, &str)]) -> LazyResult<SteamResponse> {
+async fn steam_request(endpoint: &str, arguments: &[(&str, &str)]) -> SteamResult<SteamResponse> {
     let steam_api_key = env::var("STEAM_API_KEY")?;
     let url = format!("https://api.steampowered.com/{}?key={}", endpoint, steam_api_key);
     let url = Url::parse_with_params(&url, arguments)?;
-    let result = reqwest::get(url);
+    let result = reqwest::get(url).await;
     SteamResponse::try_from(result)
 }
 
 // routes
 
 #[get("/resolve?<vanityurl>")]
-pub fn resolve(vanityurl: String) -> LazyResult<SteamResponse> {
-    steam_request("ISteamUser/ResolveVanityURL/v0001", &[("vanityurl", &vanityurl)])
+pub async fn resolve(vanityurl: String) -> SteamResult<SteamResponse> {
+    steam_request("ISteamUser/ResolveVanityURL/v0001", &[("vanityurl", &vanityurl)]).await
 }
 
 #[get("/stats/global?<gameid>")]
-pub fn stats_global(gameid: String) -> LazyResult<SteamResponse> {
-    steam_request("ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002", &[("gameid", &gameid)])
+pub async fn stats_global(gameid: String) -> SteamResult<SteamResponse> {
+    steam_request("ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002", &[("gameid", &gameid)]).await
 }
 
 #[get("/stats/schema?<appid>")]
-pub fn stats_schema(appid: String) -> LazyResult<SteamResponse> {
-    steam_request("ISteamUserStats/GetSchemaForGame/v2", &[("appid", &appid)])
+pub async fn stats_schema(appid: String) -> SteamResult<SteamResponse> {
+    steam_request("ISteamUserStats/GetSchemaForGame/v2", &[("appid", &appid)]).await
 }
 
 #[get("/stats/user?<appid>&<steamid>")]
-pub fn stats_user(appid: String, steamid: String) -> LazyResult<SteamResponse> {
-    steam_request("ISteamUserStats/GetUserStatsForGame/v0002", &[("appid", &appid), ("steamid", &steamid)])
+pub async fn stats_user(appid: String, steamid: String) -> SteamResult<SteamResponse> {
+    steam_request("ISteamUserStats/GetUserStatsForGame/v0002", &[("appid", &appid), ("steamid", &steamid)]).await
 }
