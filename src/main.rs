@@ -1,5 +1,5 @@
 mod home;
-mod paypal;
+mod vipaccess;
 mod steam;
 
 use rocket::{get, routes};
@@ -55,8 +55,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             kf2,
             pattomobile,
             pd2,
-            paypal::get,
-            paypal::post,
+            vipaccess::paypal,
+            vipaccess::get,
+            vipaccess::post,
             twenty
         ])
         .mount("/steam", routes![
