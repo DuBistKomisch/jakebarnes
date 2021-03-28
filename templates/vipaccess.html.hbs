@@ -10,6 +10,18 @@
   <p>You can enter anything here, it's just what gets displayed in your TOTP app. I'd recommend using your relevant email address and the name of the service.</p>
   <form action="/vipaccess" method="post">
     <p>
+      <label for="token_model">Token Model</label>
+      <select id="token_model" name="token_model">
+        {{#each token_models}}
+          {{#if (eq this ../token_model)}}
+            <option value="{{this}}" selected>{{this}}</option>
+          {{else}}
+            <option value="{{this}}">{{this}}</option>
+          {{/if}}
+        {{/each}}
+      </select>
+    </p>
+    <p>
       <label for="identity">Identity</label>
       <input id="identity" name="identity" type="text" value="{{#if identity}}{{identity}}{{else}}johnsmith@example.com{{/if}}" />
     </p>

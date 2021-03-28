@@ -17,6 +17,8 @@ use thiserror::Error;
 use tokio::process::Command;
 use url::Url;
 
+const TOKEN_MODELS: [&str; 2] = ["VSMT", "VSST"];
+
 #[derive(Error, Debug)]
 pub enum VipAccessError {
     #[error("command failed\ncommand: {0}\nstderr: {1}")]
@@ -54,15 +56,23 @@ impl<'r> Responder<'r, 'static> for VipAccessError {
 #[derive(FromForm)]
 pub struct VipAccessForm {
     identity: String,
-    issuer: String
+    issuer: String,
+    token_model: Option<String>
 }
 
 #[derive(Serialize)]
-struct VipAccessContext {
+struct VipAccessSimpleContext {
+    token_models: [&'static str; 2]
+}
+
+#[derive(Serialize)]
+struct VipAccessFullContext {
     identity: String,
     issuer: String,
     serial: String,
     secret: String,
+    token_model: String,
+    token_models: [&'static str; 2],
     url: String,
     qr_code: String
 }
@@ -89,15 +99,16 @@ pub fn paypal() -> Redirect {
 
 #[get("/vipaccess")]
 pub fn get() -> Template {
-    Template::render("vipaccess", ())
+    Template::render("vipaccess",  VipAccessSimpleContext { token_models: TOKEN_MODELS })
 }
 
 #[post("/vipaccess", data = "<data>")]
 pub async fn post(data: Form<VipAccessForm>) -> VipAccessResult<Template> {
     let identity = data.identity.clone();
     let issuer = data.issuer.clone();
+    let token_model = data.token_model.clone().unwrap_or("VSMT".to_string());
     // provision into url
-    let output = run_command("vipaccess provision -p -t VSMT | grep otpauth").await?;
+    let output = run_command(format!("vipaccess provision -p -t '{}' | grep otpauth", token_model)).await?;
     let mut url = Url::parse(str::from_utf8(&output.stdout)?.trim())?;
     // extract serial and secret from url
     let serial = String::from(url.path().split(':').next_back().ok_or(VipAccessError::MissingSerial)?);
@@ -111,5 +122,5 @@ pub async fn post(data: Form<VipAccessForm>) -> VipAccessResult<Template> {
     let url = url.into_string();
     let output = run_command(format!("qrencode -o - '{}'", url)).await?;
     let qr_code = base64::encode(&output.stdout);
-    Ok(Template::render("vipaccess", VipAccessContext { identity, issuer, serial, secret, url, qr_code }))
+    Ok(Template::render("vipaccess", VipAccessFullContext { identity, issuer, serial, secret, token_model, token_models: TOKEN_MODELS, url, qr_code }))
 }
