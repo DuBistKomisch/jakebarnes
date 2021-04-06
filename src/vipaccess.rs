@@ -4,7 +4,7 @@ use rocket::{
     http::{ContentType, Status},
     post,
     request::Request,
-    response::{self, Response, Responder}
+    response::{self, Redirect, Response, Responder}
 };
 use rocket_contrib::templates::Template;
 use serde::Serialize;
@@ -17,8 +17,10 @@ use thiserror::Error;
 use tokio::process::Command;
 use url::Url;
 
+const TOKEN_MODELS: [&str; 2] = ["VSMT", "VSST"];
+
 #[derive(Error, Debug)]
-pub enum PaypalError {
+pub enum VipAccessError {
     #[error("command failed\ncommand: {0}\nstderr: {1}")]
     CommandFailed(String, String),
 
@@ -38,9 +40,9 @@ pub enum PaypalError {
     Utf8Error(#[from] str::Utf8Error)
 }
 
-type PaypalResult<T> = Result<T, PaypalError>;
+type VipAccessResult<T> = Result<T, VipAccessError>;
 
-impl<'r> Responder<'r, 'static> for PaypalError {
+impl<'r> Responder<'r, 'static> for VipAccessError {
     fn respond_to(self, _: &'r Request<'_>) -> response::Result<'static> {
         let description = self.to_string();
         Response::build()
@@ -52,22 +54,30 @@ impl<'r> Responder<'r, 'static> for PaypalError {
 }
 
 #[derive(FromForm)]
-pub struct PaypalForm {
+pub struct VipAccessForm {
     identity: String,
-    issuer: String
+    issuer: String,
+    token_model: Option<String>
 }
 
 #[derive(Serialize)]
-struct PaypalContext {
+struct VipAccessSimpleContext {
+    token_models: [&'static str; 2]
+}
+
+#[derive(Serialize)]
+struct VipAccessFullContext {
     identity: String,
     issuer: String,
     serial: String,
     secret: String,
+    token_model: String,
+    token_models: [&'static str; 2],
     url: String,
     qr_code: String
 }
 
-async fn run_command<T: Into<String>>(command: T) -> PaypalResult<Output> {
+async fn run_command<T: Into<String>>(command: T) -> VipAccessResult<Output> {
     let command = command.into();
     let output = Command::new("bash")
         .arg("-o")
@@ -77,26 +87,32 @@ async fn run_command<T: Into<String>>(command: T) -> PaypalResult<Output> {
         .output()
         .await?;
     if !output.status.success() {
-        return Err(PaypalError::CommandFailed(command, str::from_utf8(&output.stderr)?.trim().to_string()))
+        return Err(VipAccessError::CommandFailed(command, str::from_utf8(&output.stderr)?.trim().to_string()))
     }
     Ok(output)
 }
 
 #[get("/paypal")]
-pub fn get() -> Template {
-    Template::render("paypal", ())
+pub fn paypal() -> Redirect {
+    Redirect::to("/vipaccess")
 }
 
-#[post("/paypal", data = "<data>")]
-pub async fn post(data: Form<PaypalForm>) -> PaypalResult<Template> {
+#[get("/vipaccess")]
+pub fn get() -> Template {
+    Template::render("vipaccess",  VipAccessSimpleContext { token_models: TOKEN_MODELS })
+}
+
+#[post("/vipaccess", data = "<data>")]
+pub async fn post(data: Form<VipAccessForm>) -> VipAccessResult<Template> {
     let identity = data.identity.clone();
     let issuer = data.issuer.clone();
+    let token_model = data.token_model.clone().unwrap_or("VSMT".to_string());
     // provision into url
-    let output = run_command("vipaccess provision -p -t VSMT | grep otpauth").await?;
+    let output = run_command(format!("vipaccess provision -p -t '{}' | grep otpauth", token_model)).await?;
     let mut url = Url::parse(str::from_utf8(&output.stdout)?.trim())?;
     // extract serial and secret from url
-    let serial = String::from(url.path().split(':').next_back().ok_or(PaypalError::MissingSerial)?);
-    let secret = String::from(url.query_pairs().find(|(k, _v)| k == "secret").ok_or(PaypalError::MissingSecret)?.1);
+    let serial = String::from(url.path().split(':').next_back().ok_or(VipAccessError::MissingSerial)?);
+    let secret = String::from(url.query_pairs().find(|(k, _v)| k == "secret").ok_or(VipAccessError::MissingSecret)?.1);
     // replace label in url
     url.set_path(&format!("/{}:{}", issuer, identity));
     // replace issuer in url
@@ -106,5 +122,5 @@ pub async fn post(data: Form<PaypalForm>) -> PaypalResult<Template> {
     let url = url.into_string();
     let output = run_command(format!("qrencode -o - '{}'", url)).await?;
     let qr_code = base64::encode(&output.stdout);
-    Ok(Template::render("paypal", PaypalContext { identity, issuer, serial, secret, url, qr_code }))
+    Ok(Template::render("vipaccess", VipAccessFullContext { identity, issuer, serial, secret, token_model, token_models: TOKEN_MODELS, url, qr_code }))
 }

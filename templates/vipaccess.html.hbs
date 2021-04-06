@@ -1,0 +1,44 @@
+{{~#*inline "head"}}
+  {{> components/asset-css name="home"}}
+{{/inline}}
+{{~#*inline "body"}}
+  <h1>VIP Access 2FA</h1>
+  <p>This is just a hosted version of the open source <a href="https://github.com/dlenski/python-vipaccess">python-vipaccess</a> tool, since it can be a pain to set up.</p>
+  <p>I originally made this page <a href="https://medium.com/@dubistkomisch/set-up-2fa-two-factor-authentication-for-paypal-with-google-authenticator-or-other-totp-client-60fee63bfa4f">for PayPal</a>, although it <a href="https://benbrian.net/authenticator-app-support-in-paypal-finally/">finally supports normal TOTP</a> nowadays, people apparently still find it useful for other services.</p>
+  <p>Since this is all about security, you should run it yourself if you don't trust me, but I promise I'm not storing anything. You can check out my code <a href="https://github.com/DuBistKomisch/jakebarnes/tree/master/src/vipaccess.rs">here</a>.</p>
+  <h3>Generate</h3>
+  <p>You can enter anything here, it's just what gets displayed in your TOTP app. I'd recommend using your relevant email address and the name of the service.</p>
+  <form action="/vipaccess" method="post">
+    <p>
+      <label for="token_model">Token Model</label>
+      <select id="token_model" name="token_model">
+        {{#each token_models}}
+          {{#if (eq this ../token_model)}}
+            <option value="{{this}}" selected>{{this}}</option>
+          {{else}}
+            <option value="{{this}}">{{this}}</option>
+          {{/if}}
+        {{/each}}
+      </select>
+    </p>
+    <p>
+      <label for="identity">Identity</label>
+      <input id="identity" name="identity" type="text" value="{{#if identity}}{{identity}}{{else}}johnsmith@example.com{{/if}}" />
+    </p>
+    <p>
+      <label for="issuer">Issuer</label>
+      <input id="issuer" name="issuer" type="text" value="{{#if issuer}}{{issuer}}{{else}}PayPal{{/if}}" />
+    </p>
+    <p>
+      <input type="submit" value="Generate" />
+    </p>
+  </form>
+  {{#if serial}}
+    <h2>Result</h2>
+    <p>Serial Number: {{serial}}</p>
+    <p>Import URL: <a href="{{url}}">{{url}}</a></p>
+    <p>QR Code: <img src="data:image/png;base64,{{qr_code}}" alt="{{url}}" /></p>
+    <p>Secret (for manual import): {{secret}}</p>
+  {{/if}}
+{{/inline}}
+{{~> layouts/default title="VIP Access 2FA"}}

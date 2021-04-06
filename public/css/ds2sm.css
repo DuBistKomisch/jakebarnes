@@ -57,6 +57,7 @@ html
   font-family: sans-serif;
   font-size: 12pt;
   color: #444;
+  background: #eee;
 }
 
 h1,
@@ -100,4 +101,15 @@ a:hover
 li
 {
   line-height: 120%;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color: #bbb;
+    background: #111;
+  }
+
+  a {
+    color: #bbb;
+  }
 }
