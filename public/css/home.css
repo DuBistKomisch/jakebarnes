@@ -27,3 +27,10 @@ a {
   padding-left: 8px;
   content: '\1f517\fe0f';
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #111;
+    color: #ddd;
+  }
+}
