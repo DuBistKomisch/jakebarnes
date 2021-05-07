@@ -25,7 +25,7 @@ pub enum VipAccessError {
     CommandFailed(String, String),
 
     #[error(transparent)]
-    IOError(#[from] io::Error),
+    IoError(#[from] io::Error),
 
     #[error("no secret")]
     MissingSecret,
@@ -106,7 +106,7 @@ pub fn get() -> Template {
 pub async fn post(data: Form<VipAccessForm>) -> VipAccessResult<Template> {
     let identity = data.identity.clone();
     let issuer = data.issuer.clone();
-    let token_model = data.token_model.clone().unwrap_or("VSMT".to_string());
+    let token_model = data.token_model.clone().unwrap_or_else(|| "VSMT".to_string());
     // provision into url
     let output = run_command(format!("vipaccess provision -p -t '{}' | grep otpauth", token_model)).await?;
     let mut url = Url::parse(str::from_utf8(&output.stdout)?.trim())?;

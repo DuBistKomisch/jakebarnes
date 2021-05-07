@@ -31,7 +31,7 @@ pub enum SteamError {
     EnvVarError(#[from] env::VarError),
 
     #[error(transparent)]
-    IOError(#[from] io::Error),
+    IoError(#[from] io::Error),
 
     #[error(transparent)]
     ReqwestError(#[from] reqwest::Error),
