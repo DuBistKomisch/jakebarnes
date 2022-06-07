@@ -6,7 +6,7 @@ use rocket::{
     request::Request,
     response::{self, Redirect, Response, Responder}
 };
-use rocket_contrib::templates::Template;
+use rocket_dyn_templates::Template;
 use serde::Serialize;
 use std::{
     io::{self, Cursor},
@@ -25,7 +25,7 @@ pub enum VipAccessError {
     CommandFailed(String, String),
 
     #[error(transparent)]
-    IoError(#[from] io::Error),
+    Io(#[from] io::Error),
 
     #[error("no secret")]
     MissingSecret,
@@ -34,10 +34,10 @@ pub enum VipAccessError {
     MissingSerial,
 
     #[error(transparent)]
-    UrlParseError(#[from] url::ParseError),
+    UrlParse(#[from] url::ParseError),
 
     #[error(transparent)]
-    Utf8Error(#[from] str::Utf8Error)
+    Utf8(#[from] str::Utf8Error)
 }
 
 type VipAccessResult<T> = Result<T, VipAccessError>;
@@ -119,7 +119,7 @@ pub async fn post(data: Form<VipAccessForm>) -> VipAccessResult<Template> {
     let pairs: Vec<_> = url.query_pairs().into_owned().filter(|(k, _v)| k != "issuer").collect();
     url.query_pairs_mut().clear().extend_pairs(pairs).append_pair("issuer", &issuer);
     // qr encode url
-    let url = url.into_string();
+    let url = String::from(url);
     let output = run_command(format!("qrencode -o - '{}'", url)).await?;
     let qr_code = base64::encode(&output.stdout);
     Ok(Template::render("vipaccess", VipAccessFullContext { identity, issuer, serial, secret, token_model, token_models: TOKEN_MODELS, url, qr_code }))

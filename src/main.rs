@@ -2,11 +2,12 @@ mod home;
 mod vipaccess;
 mod steam;
 
-use rocket::{get, routes};
-use rocket_contrib::{
-    serve::{StaticFiles, crate_relative},
-    templates::Template
+use rocket::{
+    fs::{FileServer, relative},
+    get,
+    routes
 };
+use rocket_dyn_templates::Template;
 
 #[get("/ds2sm")]
 fn ds2sm() -> Template {
@@ -46,7 +47,7 @@ fn twenty() -> Template {
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenv::dotenv()?;
 
-    rocket::build()
+    let _rocket = rocket::build()
         .mount("/", routes![
             home::get,
             ds2sm,
@@ -66,10 +67,10 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             steam::stats_schema,
             steam::stats_user
         ])
-        .mount("/", StaticFiles::from(crate_relative!("public")))
+        .mount("/", FileServer::from(relative!("public")))
         .attach(Template::fairing())
-        .launch()
-        .await?;
+        .ignite().await?
+        .launch().await?;
 
     Ok(())
 }

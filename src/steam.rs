@@ -28,19 +28,19 @@ use tokio_util::compat::FuturesAsyncReadCompatExt;
 #[derive(Error, Debug)]
 pub enum SteamError {
     #[error(transparent)]
-    EnvVarError(#[from] env::VarError),
+    EnvVar(#[from] env::VarError),
 
     #[error(transparent)]
-    IoError(#[from] io::Error),
+    Io(#[from] io::Error),
 
     #[error(transparent)]
-    ReqwestError(#[from] reqwest::Error),
+    Reqwest(#[from] reqwest::Error),
 
     #[error(transparent)]
-    ReqwestToStrError(#[from] header::ToStrError),
+    ReqwestToStr(#[from] header::ToStrError),
 
     #[error(transparent)]
-    UrlParseError(#[from] url::ParseError),
+    UrlParse(#[from] url::ParseError),
 }
 
 type SteamResult<T> = Result<T, SteamError>;
@@ -58,6 +58,7 @@ impl<'r> Responder<'r, 'static> for SteamError {
 
 // translate response from reqwest to rocket
 
+#[allow(clippy::large_enum_variant)]
 pub enum SteamResponse {
     Full {
         status: Status,
@@ -88,7 +89,7 @@ impl TryFrom<ReqwestResponse> for SteamResponse {
         let status = Status::from_code(status).unwrap_or(Status::Ok);
         let content_type = response.headers().get(header::CONTENT_TYPE)
             .map(|ct| ct.to_str()).transpose()?
-            .and_then(|ct| ContentType::parse_flexible(ct))
+            .and_then(ContentType::parse_flexible)
             .unwrap_or(ContentType::JSON);
         // convert futures AsyncRead to tokio AsyncRead
         // https://github.com/benkay86/async-applied/tree/master/reqwest-tokio-compat

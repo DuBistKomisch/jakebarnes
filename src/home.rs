@@ -1,6 +1,6 @@
 use chrono::{Local, TimeZone};
 use rocket::get;
-use rocket_contrib::templates::Template;
+use rocket_dyn_templates::Template;
 use serde::Serialize;
 
 const SECONDS_PER_YEAR: i64 = 31_557_600; // 365.25 * 24 * 60 * 60;
