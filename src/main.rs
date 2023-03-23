@@ -43,6 +43,11 @@ fn twenty() -> Template {
     Template::render("twenty", ())
 }
 
+#[get("/pokemon")]
+fn pokemon() -> Template {
+    Template::render("pokemon", ())
+}
+
 #[rocket::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenv::dotenv()?;
@@ -59,7 +64,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             vipaccess::paypal,
             vipaccess::get,
             vipaccess::post,
-            twenty
+            twenty,
+            pokemon
         ])
         .mount("/steam", routes![
             steam::resolve,

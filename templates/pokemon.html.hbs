@@ -1,0 +1,48 @@
+{{~#*inline "head"}}
+  {{> components/asset-css name="home"}}
+  {{> components/asset-css name="pokemon"}}
+{{/inline}}
+{{~#*inline "body"}}
+  <h1>Pokemon Patches</h1>
+  <p>These are patches I've made for Pokemon games.</p>
+  <p>Apply the patches to an original English copy of the relevant game using e.g. <a href="https://www.marcrobledo.com/RomPatcher.js/">RomPatcher.js</a> or <a href="https://fusoya.eludevisibility.org/lips/">Lunar IPS</a>.</p>
+  <h2>Hardcore Nuzlocke / Minimal Grinding</h2>
+  <table class="downloads">
+    <thead>
+      <tr>
+        <th>Game</th>
+        <th>Link</th>
+        <th>Original MD5</th>
+        <th>Patched MD5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>FireRed</td>
+        <td><a href="files/firered-hcnl-v1.ips">firered-hcnl-v1.ips</a></td>
+        <td>e26ee0d44e809351c8ce2d73c7400cdd</td>
+        <td>0154c7a786fc48c4c3e7e1d1ef0935a7</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Description</h3>
+  <p>This patch is intended for people who want a well defined challenge mode, and don't have time to waste on grinding to play optimally. I recommend following <a href="https://www.youtube.com/watch?v=2B5rdsHPC9U">PokemonChallenge's rules</a>, which I'll summarise here.<p>
+  <p>The following changes are made to grinding:</p>
+  <ul>
+    <li>Set EV yields of all Pokemon to zero, removing the need to EV train. This also removes one advantage you can have over NPC's Pokemon.</li>
+    <li>Add rare candies to all marts for 1₽, removing the need to grind EXP.</li>
+  </ul>
+  <p>The following rules <i>are</i> enforced:</p>
+  <ul>
+    <li>Items can't be used in battle, except balls.</li>
+    <li>Always use set mode.</li>
+  </ul>
+  <p>The following rules <i>are not</i> enforced, and must be followed manually:</p>
+  <ul>
+    <li>Only capture the first encounter (or gift etc.) in a location, based on the "Met at" field in the Pokemon summary. Manipulation with repels etc. is allowed. Dupes/species clause apply, but not shiny clause.</li>
+    <li>Permadeath &ndash; can't use a Pokemon after it faints, and game over after whiting out.</li>
+    <li>Nickname every Pokemon.</li>
+    <li>Level caps &ndash; can't use a Pokemon with a higher level than the highest level Pokemon of the next boss (e.g. gym leader). For the Pokemon League, use the last elite four member.</li>
+  </ul>
+{{/inline}}
+{{~> layouts/default title="Pokemon Patches"}}
