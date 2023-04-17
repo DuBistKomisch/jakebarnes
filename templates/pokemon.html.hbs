@@ -5,7 +5,7 @@
 {{~#*inline "body"}}
   <h1>Pokemon Patches</h1>
   <p>These are patches I've made for Pokemon games.</p>
-  <p>Apply the patches to an original English copy of the relevant game using e.g. <a href="https://www.marcrobledo.com/RomPatcher.js/">RomPatcher.js</a> or <a href="https://fusoya.eludevisibility.org/lips/">Lunar IPS</a>.</p>
+  <p>Apply the BPS patches to an original English copy of the relevant game using e.g. <a href="https://www.marcrobledo.com/RomPatcher.js/">RomPatcher.js</a>.</p>
   <h2>Hardcore Nuzlocke / Minimal Grinding</h2>
   <table class="downloads">
     <thead>
@@ -14,14 +14,22 @@
         <th>Link</th>
         <th>Original MD5</th>
         <th>Patched MD5</th>
+        <th>Source Code</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>FireRed</td>
-        <td><a href="files/firered-hcnl-v1a.ips">firered-hcnl-v1a.ips</a></td>
+        <td><a href="files/firered-hcnl-v1b.bps">firered-hcnl-v1b.bps</a></td>
         <td>e26ee0d44e809351c8ce2d73c7400cdd</td>
-        <td>04a9dcf7ae8ba846ed7d6dfa9ca24ede</td>
+        <td>8daf8357a3b4b05fb1f39133f781841d</td>
+        <td rowspan="2"><a href="https://github.com/DuBistKomisch/pokefirered-hcnl">pokefirered-hcnl</a></td>
+      </tr>
+      <tr>
+        <td>LeafGreen</td>
+        <td><a href="files/leafgreen-hcnl-v1b.bps">leafgreen-hcnl-v1b.bps</a></td>
+        <td>612ca9473451fa42b51d1711031ed5f6</td>
+        <td>e91df4d544a53d58746a341090287b6b</td>
       </tr>
     </tbody>
   </table>
@@ -34,14 +42,14 @@
   </ul>
   <p>The following rules <i>are</i> enforced:</p>
   <ul>
-    <li>Items can't be used in battle, except balls.</li>
-    <li>Always use set mode.</li>
+    <li>Nickname every Pokemon.</li>
+    <li>Items can't be used in battle, except balls. Healing items and X items are completely overpowered.</li>
+    <li>Always use set mode. Switch mode gives a huge tempo advantage over NPCs.</li>
   </ul>
   <p>The following rules <i>are not</i> enforced, and must be followed manually:</p>
   <ul>
     <li>Only capture the first encounter (or gift etc.) in a location, based on the "Met at" field in the Pokemon summary. Manipulation with repels etc. is allowed. In-game trades are allowed regardless of location. Dupes/species clause apply, but not shiny clause.</li>
     <li>Permadeath &ndash; can't use a Pokemon after it faints, and game over after whiting out.</li>
-    <li>Nickname every Pokemon.</li>
     <li>Level caps &ndash; can't use a Pokemon with a higher level than the highest level Pokemon of the next boss (e.g. gym leader). For the Pokemon League, use the last elite four member.</li>
   </ul>
 {{/inline}}
