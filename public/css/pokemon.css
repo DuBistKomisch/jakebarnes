@@ -1,11 +1,15 @@
 .downloads {
   border-collapse: collapse;
+  margin: 0 -16px;
 }
 
 .downloads > thead > tr > th,
 .downloads > tbody > tr > td {
   border: 2px solid #808080;
   padding: 8px;
+}
+
+.downloads > tbody > tr > td {
   text-align: left;
 }
 
