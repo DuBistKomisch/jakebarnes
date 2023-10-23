@@ -19,7 +19,7 @@
         "name": "Dead Silence",
         "description": "Kill a Siren Before She Screams",
         "link": "",
-        "rate": 64.5
+        "rate": 65.69
       },
       {
         "id": "quick-on-the-trigger",
@@ -28,7 +28,7 @@
         "name": "Quick on the Trigger",
         "description": "Kill the Patriarch Before He Has a Chance to Heal",
         "link": "",
-        "rate": 24.6
+        "rate": 26
       },
       {
         "id": "its-only-a-flesh-wound",
@@ -37,7 +37,7 @@
         "name": "It's Only a Flesh Wound",
         "description": "Kill Your First Fleshpound",
         "link": "",
-        "rate": 66.5
+        "rate": 67.59
       },
       {
         "id": "hack-and-slash",
@@ -46,7 +46,7 @@
         "name": "Hack and Slash",
         "description": "Kill Your First Scrake",
         "link": "",
-        "rate": 66.09
+        "rate": 67.09
       },
       {
         "id": "die-volter",
@@ -55,7 +55,7 @@
         "name": "Die Volter",
         "description": "Kill Dr. Hans Volter For the First Time",
         "link": "",
-        "rate": 42.29
+        "rate": 43.7
       },
       {
         "id": "win-1",
@@ -64,7 +64,7 @@
         "name": "Win 1",
         "description": "Win 1 Multiplayer Match",
         "link": "",
-        "rate": 61.09
+        "rate": 61.5
       },
       {
         "id": "win-10",
@@ -73,7 +73,7 @@
         "name": "Win 10",
         "description": "Win 10 Multiplayer Matches",
         "link": "",
-        "rate": 29.29
+        "rate": 29.2
       },
       {
         "id": "win-25",
@@ -82,7 +82,7 @@
         "name": "Win 25",
         "description": "Win 25 Multiplayer Matches",
         "link": "",
-        "rate": 16.1
+        "rate": 16
       },
       {
         "id": "vs-zed-win",
@@ -91,7 +91,7 @@
         "name": "VS Zed Win",
         "description": "Win a VS Survival Round Playing as the Zeds",
         "link": "",
-        "rate": 8.6
+        "rate": 8.39
       },
       {
         "id": "vs-human-win",
@@ -109,7 +109,7 @@
         "name": "Hold Out",
         "description": "Weld a Door to 100%",
         "link": "",
-        "rate": 51
+        "rate": 51.29
       },
       {
         "id": "i-got-your-back",
@@ -118,7 +118,7 @@
         "name": "I Got Your Back",
         "description": "Heal a Teammate With the Syringe",
         "link": "",
-        "rate": 48.59
+        "rate": 48.79
       },
       {
         "id": "benefactor",
@@ -127,7 +127,7 @@
         "name": "Benefactor",
         "description": "Give 1000 Dosh to Another Player During a Multiplayer Match",
         "link": "",
-        "rate": 38.2
+        "rate": 38.09
       },
       {
         "id": "deaths-door",
@@ -143,7 +143,7 @@
         "icon": "b9c6024c92e04d92c020b104e4d6b53c8af514ca",
         "name": "End of the Line",
         "description": "Defeat the Matriarch on any difficulty.",
-        "rate": 23.39
+        "rate": 26.39
       }
     ]
   }
