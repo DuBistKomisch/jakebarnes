@@ -7,10 +7,14 @@ RUN apt-get update && \
 
 WORKDIR /workspace
 
+# dummy build to cache deps
+RUN USER=root cargo init
 COPY Cargo.lock Cargo.toml ./
-COPY src/ src/
-
 RUN cargo build --release
+
+# real build
+COPY src/ src/
+RUN touch src/main.rs && cargo build --release
 
 COPY public/ public/
 COPY templates/ templates/
