@@ -1,9 +1,9 @@
-FROM rust:1-buster
+FROM rust:1
 
 RUN apt-get update && \
     apt-get install -y python3-pip qrencode && \
     apt-get clean && \
-    pip3 install python-vipaccess
+    pip3 install --break-system-packages python-vipaccess
 
 WORKDIR /workspace
 

@@ -1,3 +1,4 @@
+use base64::prelude::*;
 use rocket::{
     form::{Form, FromForm},
     get,
@@ -121,6 +122,6 @@ pub async fn post(data: Form<VipAccessForm>) -> VipAccessResult<Template> {
     // qr encode url
     let url = String::from(url);
     let output = run_command(format!("qrencode -o - '{}'", url)).await?;
-    let qr_code = base64::encode(&output.stdout);
+    let qr_code = BASE64_STANDARD.encode(output.stdout);
     Ok(Template::render("vipaccess", VipAccessFullContext { identity, issuer, serial, secret, token_model, token_models: TOKEN_MODELS, url, qr_code }))
 }

@@ -1,17 +1,15 @@
-use chrono::{Local, TimeZone};
+use chrono::{Local, NaiveDate};
 use rocket::get;
 use rocket_dyn_templates::Template;
 use serde::Serialize;
 
-const SECONDS_PER_YEAR: i64 = 31_557_600; // 365.25 * 24 * 60 * 60;
-
 #[derive(Serialize)]
 struct HomeContext {
-    age: i64
+    age: u32
 }
 
 #[get("/")]
 pub fn get() -> Template {
-    let age = Local::today().signed_duration_since(Local.ymd(1992, 8, 19)).num_seconds() / SECONDS_PER_YEAR;
+    let age = Local::now().date_naive().years_since(NaiveDate::from_ymd_opt(1992, 8, 19).unwrap()).unwrap();
     Template::render("home", HomeContext { age })
 }
